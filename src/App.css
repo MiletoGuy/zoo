@@ -21,16 +21,34 @@
   font-weight: bold;
 }
 
-.usuario {
-  font-size: calc(16px);
-  color: #000;
+.input{
+  font-size: calc(20px);  
   border-radius: 5px/5px;
-   
+  padding-left: 10px;
+  background-color:rgb(222, 212, 212);
+  border: none;
 }
 
-.senha{
-  font-size: calc(16px);  
+.App-titulo{
+  font-size: 20px;
+ color: rgb(123, 119, 119);
+
+}
+
+.App-senha{
+  font-size: 20px;
+  color: rgb(123, 119, 119);
+}
+
+.entrar{
+  font-size: calc(20px);
   border-radius: 5px/5px;
+  padding-left: 200px;
+  color:#fff;
+  background-color:rgb(19, 94, 47);
+  border: none;
+  text-align: center;
+  
 }
 
 
