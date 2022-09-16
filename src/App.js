@@ -13,15 +13,18 @@ function App() {
           <label>
             Usuario
             <p>
-            <input type="email" name="name" className='input' />
+            <input type="email" name="name" className='usuario' />
             </p>
           </label>
-         
+         </form>
+         <form className='App-senha'>
         <label>
             Senha
             <p>
-            <input type="password" name="name" className='input' />
+              <p>
+            <input type="password" name="name" className='senha' />
             </p>
+             </p>
           </label>
           </form> 
           <input type="submit" value="Entrar" className='entrar' />
