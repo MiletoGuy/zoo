@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  width: 1500px;
+  width: 100%;
 }
 
 .App-logo {
@@ -54,7 +54,7 @@
 .entrar{
 position: relative;
 background: lightgray;
-width: 18%;
+width: 17%;
 margin: 0 auto;
 height: 28px;
 border-radius: 5px/5px;
