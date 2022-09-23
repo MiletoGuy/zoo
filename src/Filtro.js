@@ -17,9 +17,34 @@ const search = (data) => {
 
   return (
     <div className='app'>
-      <input type="text" placeholder='Procurar...' className='search' onChange={e=> setQuery(e.target.value)} />
 
-    <Table data={search(Users)}></Table>
+      <header className="logo">
+        <img src="/imagens/logozoocasc.png" className="img-logo" />
+        <div className="conta">
+        <button className="email">email</button>
+        </div>
+      </header>
+      <header className="barra">
+        <button className="consultani">Consultar Animal</button>
+      </header>
+      <header className="titulo">
+        <t1 className="consultaranimal">
+          Consultar Animal
+        </t1>
+        <p></p>
+        <t2 className="digite">
+          Digite o apelido ou código do animal
+        </t2>
+      </header>
+
+      <div className="barrapesquisa">
+        <input type="text" placeholder='Procurar...' className='search' onChange={e=> setQuery(e.target.value)} />
+        <button className="pesquisar">Pesquisar</button>
+        <div className="add"><button className="adicionar">Adicionar +</button></div>
+      </div>
+    <div className="tabela">
+      <Table data={search(Users)}></Table>
+    </div>
 
     </div>
   );

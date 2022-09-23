@@ -3,6 +3,115 @@
   width: 100%;
 }
 
-.table {
+.logo {
+  text-align: left;
+  width: 80%;
+  padding-top: 20px;
+  padding-left: 10%;
+}
+
+.conta {
+  text-align: right;
+}
+
+.email {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: 200px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226) ;
+}
+
+.barra {
+  background-color: rgb(226, 226, 226);
+  padding-left: 10%;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+}
+
+.consultani {
+  border-style: none;
+  background-color: rgb(226, 226, 226);
+  padding-left: 0%;
+}
+
+.titulo {
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.consultaranimal {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.digite {
+  font-size: 16px;
+}
+
+.barrapesquisa {
+  display: flex;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 8px;
+}
+
+.search {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: 200px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226);
+}
+
+.pesquisar {
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: auto;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(176,202,160);
+}
+
+.add {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.adicionar {
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: auto;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(176,202,160);
+}
+
+.tabela {
+  text-align: center;
+}
+
+.tbody {
+  text-align: center;
+}
+
+.tr1 {
   text-align: center;
 }
