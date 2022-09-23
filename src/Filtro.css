@@ -38,6 +38,9 @@
   border-style: none;
   background-color: rgb(226, 226, 226);
   padding-left: 0%;
+  padding-right: 10px;
+  color: rgb(90, 90, 90);
+  border-right: 1px solid rgb(90, 90, 90);
 }
 
 .titulo {
@@ -104,14 +107,39 @@
   background-color: rgb(176,202,160);
 }
 
+.tabela-div {
+ display: flex;
+ justify-content: center;
+
+
+}
+
 .tabela {
-  text-align: center;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 80%;
+  text-align: left;
+  font-weight: 500;
 }
 
-.tbody {
-  text-align: center;
+.tabela thead tr {
+  background-color: rgb(176,202,160);
+  font-weight: bold;
 }
 
-.tr1 {
-  text-align: center;
+.tabela th, .tabela td {
+  padding: 12px 15px;
+}
+
+.tabela tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tabela tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tabela tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(176,202,160);
 }

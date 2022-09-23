@@ -42,7 +42,7 @@ const search = (data) => {
         <button className="pesquisar">Pesquisar</button>
         <div className="add"><button className="adicionar">Adicionar +</button></div>
       </div>
-    <div className="tabela">
+    <div className="tabela-div">
       <Table data={search(Users)}></Table>
     </div>
 

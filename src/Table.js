@@ -5,19 +5,25 @@ const Table = ({ data }) => {
 
     return (
         <table className='tabela'>
-            <tbody className='tbody'>
+            <thead>
                 <tr className='tr1'>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Sobrenome</th>
-                    <th>Email</th>
+                    <th>Apelido</th>
+                    <th>Código</th>
+                    <th>Indentificação</th>
+                    <th>Especie</th>
+                    <th>Nome cientifico</th>
+                    <th>Sexo</th>
                 </tr>
+            </thead>
+            <tbody className='tbody'>
                 {data.map((item) => (
                 <tr key={item.id} className='tr2'>
-                    <th>{item.id}</th>
-                    <th>{item.name}</th>
-                    <th>{item.surname}</th>
-                    <th>{item.email}</th>
+                    <td>{item.name}</td>
+                    <td>{item.id}</td>
+                    <td>{item.id}</td>
+                    <td>{item.email}</td>
+                    <td>{item.surname}</td>
+                    <td>{item.id}</td>
                 </tr>
                 ))}
 
