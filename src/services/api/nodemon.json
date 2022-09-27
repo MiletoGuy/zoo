@@ -1,0 +1,10 @@
+{
+  "env": {
+    "POSTGRESQL_HOST": "localhost",
+    "POSTGRESQL_PORT": 5432,
+    "POSTGRESQL_DATABASE": "zoo",
+    "POSTGRESQL_USER": "admin",
+    "POSTGRESQL_PASSWORD": "admin",
+    "SECRET": "segredinho"
+  }
+}
