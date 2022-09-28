@@ -16,7 +16,7 @@ function verifyJWT(req, res, next) {
 
 router.get('/', verifyJWT, (req, res, next) => {
     let promise = new Promise(function (resolve, reject) {
-        pool.query('SELECT * FROM usuario', [], (error, result) => {
+        pool.query('SELECT * FROM usoMedicacao', [], (error, result) => {
             if (error) {
                 console.log("erro na query")
                 reject("Ocorreu um erro na query", error)
@@ -28,22 +28,17 @@ router.get('/', verifyJWT, (req, res, next) => {
     promise.then(result => {
         const response = {
             quantidade: result.rowCount,
-            usuarios: result.rows.map(row => {
+            usoMedicacoes: result.rows.map(row => {
                 return {
                     id: row.id,
-                    nome: row.nome,
-                    email: row.email,
-                    senha: row.senha,
-                    cadastro: row.cadastro,
-                    telefone: row.telefone,
-                    acesso: row.acesso,
-                    id_endereco: row.id_endereco
+                    horario: row.horario,
+                    id_medicacao: row.id_medicacao
                 }
             }),
             request: {
                 method: 'GET',
-                descricao: 'Retorna todos os usuários',
-                url: 'htpp://localhost:3001/usuarios/' + result.rows[0].id
+                descricao: 'Retorna todos os usos de medicações',
+                url: 'htpp://localhost:3001/usoMedicacoes/' + result.rows[0].id
             }
         }
         res.status(200).send({response})
@@ -56,15 +51,10 @@ router.get('/', verifyJWT, (req, res, next) => {
 
 router.post('/', verifyJWT, (req, res, next) => {
     let promise = new Promise(function (resolve, reject) {
-        const nome = req.body.nome
-        const email = req.body.email
-        const senha = req.body.senha
-        const cadastro = req.body.cadastro
-        const telefone = req.body.telefone
-        const acesso = req.body.acesso
-        const id_endereco = req.body.id_endereco
-        pool.query('INSERT INTO usuario (nome, email, senha, cadastro, telefone, acesso, id_endereco) VALUES ($1,$2,crypt($3,gen_salt($4)),$5,$6,$7,$8) RETURNING *',
-            [nome, email, senha, 'bf', cadastro,telefone,acesso,id_endereco], (error, result) => {
+        const horario = req.body.horario
+        const id_medicacao = req.body.id_medicacao
+        pool.query('INSERT INTO usoMedicacao (horario, id_medicacao) VALUES ($1,$2) RETURNING *',
+            [horario,id_medicacao], (error, result) => {
                 if (error) {
                     console.log("erro na query")
                     reject("Ocorreu um erro na query", error)
@@ -75,33 +65,28 @@ router.post('/', verifyJWT, (req, res, next) => {
     })
     promise.then(result => {
         const response = {
-            mensagem: "Usuário cadastrado com sucesso",
-            usuario: result.rows.map(row => {
+            mensagem: "Uso de medicação cadastrado com sucesso",
+            usoMedicacao: result.rows.map(row => {
                 return {
                     id: row.id,
-                    nome: row.nome,
-                    email: row.email,
-                    senha: row.senha,
-                    cadastro: row.cadastro,
-                    telefone: row.telefone,
-                    acesso: row.acesso,
-                    id_endereco: row.id_endereco
+                    horario: row.horario,
+                    id_medicacao: row.id_medicacao
                 }
             }),
             request: {
                 method: 'POST',
-                descricao: 'Cadastra um usuário',
-                url: 'htpp://localhost:3001/usuarios/' + result.rows[0].id
+                descricao: 'Cadastra um uso de medicação',
+                url: 'htpp://localhost:3001/usoMedicacoes/' + result.rows[0].id
             }
         }
         res.status(200).send({response})
     }).catch(error => res.status(400).send({mensagem: "Erro de resposta da promise", error}))
 })
 
-router.get('/:id_usuario', verifyJWT, (req, res, next) => {
+router.get('/:id_usoMedicacao', verifyJWT, (req, res, next) => {
     let promise = new Promise(function (resolve, reject) {
-        const id_usuario = req.params.id_usuario
-        pool.query('SELECT * FROM usuario WHERE id = $1', [id_usuario], (error, result) => {
+        const id_usoMedicacao = req.params.id_usoMedicacao
+        pool.query('SELECT * FROM usoMedicacao WHERE id = $1', [id_usoMedicacao], (error, result) => {
             if (error) {
                 console.log("erro na query")
                 reject("Ocorreu um erro na query", error)
@@ -113,22 +98,17 @@ router.get('/:id_usuario', verifyJWT, (req, res, next) => {
 
     promise.then(result => {
         const response = {
-            usuario: result.rows.map(row => {
+            usoMedicacao: result.rows.map(row => {
                 return {
                     id: row.id,
-                    nome: row.nome,
-                    email: row.email,
-                    senha: row.senha,
-                    cadastro: row.cadastro,
-                    telefone: row.telefone,
-                    acesso: row.acesso,
-                    id_endereco: row.id_endereco
+                    horario: row.horario,
+                    id_medicacao: row.id_medicacao
                 }
             }),
             request: {
                 method: 'GET',
-                descricao: 'Retorna um usuário específico',
-                url: 'htpp://localhost:3001/usuarios/' + result.rows[0].id
+                descricao: 'Retorna um uso de medicação específico',
+                url: 'htpp://localhost:3001/usoMedicacao/' + result.rows[0].id
             }
         }
         res.status(200).send({response})
@@ -138,14 +118,11 @@ router.get('/:id_usuario', verifyJWT, (req, res, next) => {
 
 router.patch('/', verifyJWT, (req, res, next) => {
     let promise = new Promise(function (resolve, reject) {
-        const id_endereco = req.body.id_endereco
-        const rua = req.body.rua
-        const numero = req.body.numero
-        const bairro = req.body.bairro
-        const cidade = req.body.cidade
-        const uf = req.body.uf
-        pool.query('UPDATE endereco SET rua = $1, numero = $2, bairro = $3, cidade = $4, uf = $5 WHERE id = $6 RETURNING *',
-            [rua, numero, bairro, cidade, uf, id_endereco], (error, result) => {
+        const id_usoMedicacao = req.body.id_usoMedicacao
+        const horario = req.body.horario
+        const id_medicacao = req.body.id_medicacao
+        pool.query('UPDATE usoMedicacao SET horario = $1, id_medicacao = $2 WHERE id = $3 RETURNING *',
+            [horario,id_medicacao,id_usoMedicacao], (error, result) => {
                 if (error) {
                     console.log("erro na query")
                     reject("Ocorreu um erro na query", error)
@@ -156,21 +133,18 @@ router.patch('/', verifyJWT, (req, res, next) => {
     })
     promise.then(result => {
         const response = {
-            mensagem: "Endereço atualizado com sucesso",
-            endereco: result.rows.map(row => {
+            mensagem: "Uso de medicação atualizado com sucesso",
+            usoMedicacao: result.rows.map(row => {
                 return {
                     id: row.id,
-                    rua: row.rua,
-                    numero: row.numero,
-                    bairro: row.bairro,
-                    cidade: row.cidade,
-                    uf: row.uf
+                    horario: row.horario,
+                    id_medicacao: row.id_medicacao
                 }
             }),
             request: {
                 method: 'PATCH',
-                descricao: 'Atualiza um endereço',
-                url: 'htpp://localhost:3001/enderecos/' + result.rows[0].id
+                descricao: 'Atualiza um uso de medicação',
+                url: 'htpp://localhost:3001/usoMedicacoes/' + result.rows[0].id
             }
         }
         res.status(200).send({response})

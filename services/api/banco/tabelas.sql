@@ -48,20 +48,6 @@ CREATE TABLE animal
     FOREIGN KEY (id_raca) REFERENCES raca (id)
 );
 
-CREATE TABLE monitoramento
-(
-    id       serial primary key,
-    hora     integer,
-    FC       numeric,
-    FR       numeric,
-    ETCO2    numeric,
-    SP02     numeric,
-    PS       numeric,
-    PD       numeric,
-    PM       numeric,
-    TC       numeric,
-    GLICEMIA numeric
-);
 
 CREATE TABLE internamento
 (
@@ -73,13 +59,21 @@ CREATE TABLE internamento
     FOREIGN KEY (id_animal) REFERENCES animal (id)
 );
 
-CREATE TABLE internamento_monitoramento
+CREATE TABLE monitoramento
 (
-    id serial primary key,
-    id_internamento               integer,
-    id_monitoramento              integer,
-    FOREIGN KEY (id_internamento) REFERENCES internamento (id),
-    FOREIGN KEY (id_monitoramento) REFERENCES monitoramento (id)
+    id       serial primary key,
+    id_internamento integer,
+    hora     integer,
+    FC       numeric,
+    FR       numeric,
+    ETCO2    numeric,
+    SPO2     numeric,
+    PS       numeric,
+    PD       numeric,
+    PM       numeric,
+    TC       numeric,
+    GLICEMIA numeric,
+    FOREIGN KEY (id_internamento) REFERENCES internamento (id)
 );
 
 CREATE TABLE medicacao

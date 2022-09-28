@@ -178,7 +178,7 @@ router.patch('/', verifyJWT, (req, res, next) => {
                 }
             }),
             request: {
-                method: 'POST',
+                method: 'PATCH',
                 descricao: 'Atualiza um animal',
                 url: 'htpp://localhost:3001/animais/' + result.rows[0].id
             }
