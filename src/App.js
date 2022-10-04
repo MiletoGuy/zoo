@@ -29,7 +29,9 @@ function App() {
           </label>
           </form> 
           <input type="submit" value="Entrar" className='entrar' />
+          <div className='planejado'>Esqueceu sua senha?</div>
           </div> 
+          
           
           
   );

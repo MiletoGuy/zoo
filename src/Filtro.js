@@ -19,7 +19,7 @@ const search = (data) => {
     <div className='app'>
 
       <header className="logo">
-        <img src="/imagens/logozoocasc.png" className="img-logo" />
+        <img src="/imagens/logozoocasc.jpg" className="img-logo" />
         <div className="conta">
         <button className="email">email</button>
         </div>

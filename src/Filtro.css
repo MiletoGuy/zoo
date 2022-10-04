@@ -14,6 +14,11 @@
   text-align: right;
 }
 
+.img-logo {
+  height: 100px;
+
+}
+
 .email {
   padding-left: 10px;
   padding-right: 10px;
