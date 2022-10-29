@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ficha-animal.css" />
+    <!--Colocar em um arquivo separado-->
+</head>
+
+<body>
+    <div id="cabecalho">
+        <img src="LogoZooCascavel.png">
+        <div id="header">
+        </div>
+        <ul id="navigation">
+            <select name="opcoes" id="login-select"size="1">
+                <option value="">
+                    <b> NatalinoPinto@gmail.com </b>
+                </option>
+                <option value="">
+                    <b>Sair</b>
+                </option>
+            </select>
+        </ul>
+    </div>
+    <table class="rodape">
+        <tr>
+            <td id="consultar-animal">
+                <span>Consultar Animal</span>
+            </td>
+            <td id="voltar">
+                <span>Voltar</span>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="formulario" id="ficha-bondie">
+        <tr>
+            <td colspan="6" id="titulo-tabelas">
+                <span>Ficha da Blondie</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="codigo_bondie">Código</label>
+                <br>
+                <input type="text" value="123456789012347" id="codigo-bondie" name="codigo_bondie" />
+            </td>
+            <td>
+                <label for="apelido">Apelido</label>
+                <br>
+                <input type="text" value="Blondie" name="apelido" />
+            </td>
+            <td>
+                <label for="identif">Identificação</label>
+                <br>
+                <input type="text" value="Micro-Chip" name="identif" />
+            </td>
+            <td>
+                <label for="idade">Idade</label>
+                <br>
+                <input type="text" value="12 anos" name="idade" />
+            </td>
+            <td>
+                <label for="sexo">Sexo</label>
+                <br>
+                <input type="text" value="F" name="sexo" />
+            </td>
+            <td>
+                <label for="dt_entrada">Data de Entrada</label>
+                <br>
+                <input type="text" value="01/07/2017" name="dt_entrada" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="especie">Espécie</label>
+                <br>
+                <input type="text" value="Onça" name="especie" />
+            </td>
+            <td>
+                <label for="nm_cientifico">Nome Científico</label>
+                <br>
+                <input type="text" value="Panthera Onça" name="nm_cientifico" />
+            </td>
+            <td>
+                <label for="status">Status</label>
+                <br>
+                <input type="text" value="Normal" name="status" />
+            </td>
+            <td colspan="3">
+                <label for="habitat">Habitat</label>
+                <br>
+                <input type="text" value="12-C" name="habitat" />
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="formulario" id="nutricao-alimentar">
+        <tr>
+            <td id="titulo-tabelas">
+                <span>Nutrição Alimentar</span>
+            </td>
+        </tr>
+        <tr id="nutricao-linha">
+            <td>
+                <select name="opcoes" id="cardapio-button"size="1">
+                    <option value="">
+                        Cardapio Semanal
+                    </option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="formulario" id="historico-clinico">
+        <tr>
+            <td id="titulo-tabelas"> <span> Histórico Clínico </span> </td>
+            <td colspan="2" id="titulo-adc1">
+                <span> + Adicionar </span>
+            </td>
+        </tr>
+        <tr class="tr-formulario" id="linha-colorida">
+            <td>
+                Consulta
+            </td>
+            <td>
+                Data
+            </td>
+            <td>
+                Descrição
+            </td>
+            <td >
+                Anexo
+            </td>
+        </tr>
+        <tr class="tr-formulario">
+            <td>
+                Internamento
+            </td>
+            <td>
+                01/02/2022
+            </td>
+            <td>
+                Internamento devido a intoxicação alimentar
+            </td>
+            <td>
+                <img src="clips.png" alt="">
+            </td>
+        </tr>
+        <tr class="tr-formulario" id="linha-colorida">
+            <td>
+                Check up
+            </td>
+            <td>
+                09/01/2022
+            </td>
+            <td>
+                Consulta de rotina
+            </td>
+            <td>
+                <img src="clips.png" alt="">
+            </td>
+        </tr>
+        <tr class="tr-formulario">
+            <td>
+                Consulta
+            </td>
+            <td>
+                23/12/2021
+            </td>
+            <td>
+                Consulta para averiguar descoloramento do pelo
+            </td>
+            <td>
+                <img src="clips.png" alt="">
+            </td>
+        </tr>
+        <tr class="tr-formulario" id="linha-colorida">
+            <td colspan="4">
+
+            </td>
+        </tr>
+        <tr class="tr-formulario">
+            <td colspan="4" id="titulo-most">
+                <span>Mostrar +</span>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="formulario" id="historico-etimologico">
+        <tr>
+            <td id="titulo-tabelas"> <span>Historico Etimologico</span></td>
+            <td colspan="4" id="titulo-adc2">
+                <span> + Adicionar </span>
+                </td>
+        </tr>
+        <tr class="tr-formulario" id="linha-colorida">
+            <td>
+                Data
+            </td>
+            <td>
+                Horario
+            </td>
+            <td>
+                Comportamento
+            </td>
+            <td>
+                Responsavel
+            </td>
+        </tr>
+            <tr class="tr-formulario">
+            <td>
+                01/02/2022
+            </td>
+            <td>
+                14:25
+            </td>
+            <td>
+                Parado Ativo
+            </td>
+            <td>
+                Josias
+            </td>
+        </tr>
+        <tr class="tr-formulario" id="linha-colorida">
+            <td>
+                09/01/2022
+            </td>
+            <td>
+                16:45
+            </td>
+            <td>
+                Interação Social Positiva
+            </td>
+            <td>
+                Carlos
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="formulario" id="">
+        <tr>
+            <td id="titulo-tabelas"><span>Enriquecimento Ambiental</span></td>
+            <td id="titulo-adc3">
+                <span>+ Adicionar</span>
+                <img src="calendario.png" width="50px" height="38px">
+            </td>
+        </tr>
+        <tr class="enriquecimento-tr">
+            <td>
+                <button class="botao-enriquecimento" id="btn-enriquecimento1">Bola de Pano 03/08/2022</button>
+            </td>
+            <td>
+                <button class="botao-enriquecimento" id="btn-enriquecimento2">Abobora de Carne 21/07/2022</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <!-- Os modais da putaria colocar em um arquivo separado com seu respectivo nome da tela-->
+
+    <button id="myBtn">Open Modal</button>
+
+<!-- The Modal
+    <div id="myModal" class="modal">
+        Modal content
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>-->
+
+    <div id="modal-enriquecimento" class="modal">
+        <div class="modal-content">
+        <span class="close-enriquecimento">&times;</span>
+        <table class="formulario-modal-enriquecimento" >
+            <tr>
+                <td id="titulo-tabelas" colspan="2"><span>Enriquecimento Ambiental</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="atividade">Atividade</label>
+                    <br>
+                    <input type="text" value="Bola de pano com interior com carne vermelha" id="atividade-ambiental" name="atividade" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="descricao">Descri��o</label>
+                    <br>
+                    <textarea id="descricao-ambiental" name="descricao" rows="6" cols="60">O Animal persegiu a bola de carne por 15 minutos ap�s esse tempo, ele deitou e dormiu.</textarea>
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    <label for="data">Data</label>
+                    <br>
+                    <input type="text" value="21/03/2022" id="data-ambiental" name="data" />
+                </td>
+                 <td align="left">
+                    <label for="interacao">Intera��o</label>
+                    <br>
+                    <select name="interacao" id="interacao-ambiental"size="1">
+                        <option value="">
+                            <b> M�dia </b>
+                        </option>
+                         <option value="">
+                            <b> Baixa </b>
+                        </option>
+                        <option value="">
+                            <b>Alta</b>
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="botao-enriquecimento-modal" >Adicionar</button>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <div id="modal-nutricao" class="modal">
+        <div class="modal-content">
+            <span class="close-nutricao">&times;</span>
+            <table class="formulario-modal-enriquecimento">
+                <tr>
+                    <td id="titulo-tabelas"> <span> Nutrição Alimentar </span> </td>
+                </tr>
+                <tr>
+                    <td><button class="botao-cardapio-semanal" id="botao-novo-cardapio">Novo Cardapio Semanal <img src="clips.png" alt=""></button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="botao-enriquecimento-modal" >Adicionar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="modal-codigo" class="modal">
+         <div class="modal-content">
+            <span class="close-codigo">&times;</span>
+         <table class="formulario" id="codigos-previos">
+            <tr>
+                 <td id="titulo-tabelas"> <span> C�digos Previos </span> </td>
+            </tr>
+            <tr class="tr-formulario" id="linha-colorida">
+                <td>
+                    C�digo
+                </td>
+                <td>
+                    Data da Troca
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    123456689012347
+                </td>
+                <td>
+                    25/09/2022
+                </td>
+            </tr>
+            <tr class="tr-formulario" id="linha-colorida">
+                <td>
+                    123458989012347
+                </td>
+                <td>
+                    18/01/2022
+                </td>
+            </tr>
+         </table>
+         </div>
+    </div>
+<script>
+    // Get the modal
+    var modal_enriquec = document.getElementById("modal-enriquecimento");
+    var modal_nutricao = document.getElementById("modal-nutricao");
+
+    var btn_enriquec1 = document.getElementById("btn-enriquecimento1");
+    var btn_enriquec2 = document.getElementById("btn-enriquecimento2");
+    var btn_nutricao = document.getElementById("cardapio-button");
+
+    var span_enriquec = document.getElementsByClassName("close-enriquecimento")[0];
+    var span_nutricao = document.getElementsByClassName("close-nutricao")[0];
+
+    btn_enriquec1.onclick = function() {
+    modal_enriquec.style.display = "block";
+    }
+    btn_enriquec2.onclick = function() {
+    modal_enriquec.style.display = "block";
+    }
+    span_enriquec.onclick = function() {
+    modal_enriquec.style.display = "none";
+    }
+
+    btn_nutricao.onclick = function() {
+    modal_nutricao.style.display = "block";
+    }
+    span_nutricao.onclick = function() {
+    modal_nutricao.style.display = "none";
+    }
+
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }else if (event.target == modal_enriquec) {
+            modal_enriquec.style.display = "none";
+        }else if (event.target == modal_nutricao) {
+            modal_nutricao.style.display = "none";
+        }
+    }
+</script>
+</body>
+
+</html>
+
+<!--
+
+     var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+        var modal3 = document.getElementById("myModal3");
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        var btn2 = document.getElementById("myBtn2");
+        var btn3 = document.getElementById("myBtn3");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementById("span2");
+        var span3 = document.getElementById("span3");
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+        btn2.onclick = function() {
+        modal2.style.display = "block";
+        }
+        btn3.onclick = function() {
+        modal3.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+        span2.onclick = function() {
+        modal2.style.display = "none";
+        }
+        span3.onclick = function() {
+        modal3.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+        if (event.target == modal3) {
+            modal3.style.display = "none";
+        }
+        }
+-->
