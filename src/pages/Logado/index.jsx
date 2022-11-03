@@ -1,6 +1,6 @@
 import './logado.css';
 
-function App() {
+function Logado() {
   return (
     <div className="App">
       <header className="App-header">
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default Logado;

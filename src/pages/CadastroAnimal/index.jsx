@@ -4,7 +4,7 @@ import './Cadastroanimal.css';
 
 Modal.setAppElement('#root')
 
-function App() {
+function CadastroAnimal() {
   const [modalIsOpen, setIsOpen] = useState(false)
 
   function OpenModal() {
@@ -105,7 +105,7 @@ function App() {
         style={customStyles}
         ><h2>Cadastro de nova espécie!</h2>
           <button onClick={CloseModal}>x</button>
-          <form action="">
+          <form action="src/pages/CadastroAnimal/index.jsx">
             <input type="text" placeholder="Espécie" />
             <input type="text" placeholder="Nome Cientifico" />
             <p></p>
@@ -119,4 +119,4 @@ function App() {
   );
 }
 
-export default App;
+export default CadastroAnimal;

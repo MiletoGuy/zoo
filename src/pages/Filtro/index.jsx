@@ -3,7 +3,7 @@ import './Filtro.css';
 import Table from "./Table";
 import { Users } from "./users"
 
-function App() {
+function Filtro() {
   const [query, setQuery] = useState("");
 
 const keys = ["name", "surname", "email"]
@@ -50,4 +50,4 @@ const search = (data) => {
   );
 }
 
-export default App;
+export default Filtro;
