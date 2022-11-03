@@ -88,7 +88,7 @@
   text-align: left;
   flex-grow: 1;
   padding-left: 10%;
-  padding-right: 10%;
+  padding-right: 100%;
 }
 
 .adicionar {
@@ -115,7 +115,7 @@
 .cadastro {
   text-align: left;
   flex-grow: 1;
-  padding-left: 20%;
+  padding-left: 11%;
   padding-right: 10%;
 }
 

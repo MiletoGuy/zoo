@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import Modal from './pages/Modal/Modal.js';
 import { useNavigate } from "react-router-dom";
 import './Cadastroanimal.css';
 
@@ -74,7 +74,11 @@ function CadastroAnimal() {
         </div>
       </div>
       <div className="add"><button className="adicionar">Cadastrar</button></div>
+      <p></p>
       <div className="cadastro"><button className="cadastrar">Cadastrar uma nova especie</button></div>  
+       <Modal isOpen>
+        <h1>desgraça</h1>
+       </Modal>
        </div>
     
   );
