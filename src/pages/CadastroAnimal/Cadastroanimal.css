@@ -119,46 +119,16 @@
   padding-right: 10%;
 }
 
-.cadastro-especie {
-  margin-top: 20px;
+.cadastrar {
+  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  text-align: left;
+  text-align: center;
   height: 26px;
   width: auto;
   border-style: none;
   border-radius: 5px;
   background-color: rgb(176,202,160);
-}
 
-.cadastro1 {
-  text-align: left;
-  flex-grow: 1;
-  padding-left: 30%;
-  padding-right: 10%;
-}
-
-.cadastro-identificação {
-  margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: left;
-  height: 26px;
-  width: auto;
-  border-style: none;
-  border-radius: 5px;
-  background-color: rgb(176,202,160);
-}
-
-.OpenModal {
-  margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: left;
-  height: 26px;
-  width: auto;
-  border-style: none;
-  border-radius: 5px;
-  background-color: rgb(176,202,160);
 }
 

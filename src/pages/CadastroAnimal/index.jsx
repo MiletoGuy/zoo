@@ -1,30 +1,11 @@
 import { useState } from "react"
-import Modal from 'react-modal';
+
+import { useNavigate } from "react-router-dom";
 import './Cadastroanimal.css';
 
-Modal.setAppElement('#root')
 
 function CadastroAnimal() {
-  const [modalIsOpen, setIsOpen] = useState(false)
-
-  function OpenModal() {
-    setIsOpen(true)
-  }
-
-   function CloseModal() {
-    setIsOpen(false)
-   }
-
-   const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)'
-    }
-   }
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <div className='app'>
@@ -93,30 +74,12 @@ function CadastroAnimal() {
         </div>
       </div>
       <div className="add"><button className="adicionar">Cadastrar</button></div>
-      
-      <div className="cadastro">
-        <button className="OpenModal">Cadastro espécie e identificação</button>
-        <modal
-        isOPen={modalIsOpen}
-        onRequestClose={CloseModal}
-        contentLabel="Exemple modal"
-        overLayClassName="modal-overlay"
-        className="modal-content"
-        style={customStyles}
-        ><h2>Cadastro de nova espécie!</h2>
-          <button onClick={CloseModal}>x</button>
-          <form action="src/pages/CadastroAnimal/index.jsx">
-            <input type="text" placeholder="Espécie" />
-            <input type="text" placeholder="Nome Cientifico" />
-            <p></p>
-            <input type="text" placeholder="Tipo identificação" />
-          </form>
-        </modal>
-      </div>
-   
-    </div>
+      <div className="cadastro"><button className="cadastrar">Cadastrar uma nova especie</button></div>  
+       </div>
     
   );
-}
+
+    }
+
 
 export default CadastroAnimal;
