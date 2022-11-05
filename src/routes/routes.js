@@ -4,6 +4,7 @@ import Logado from "../pages/Logado";
 import Home from "../pages/home/Home";
 import Filtro from "../pages/Filtro";
 import HistoricoEtimologico from "../pages/HistoricoEtimologico";
+import AutServMed from "../pages/AutServMed";
 
 const Rotas = () => {
     return(
@@ -14,6 +15,7 @@ const Rotas = () => {
                 <Route element = { <Filtro/>} path="/filtro"/>
                 <Route element = { <HistoricoEtimologico/>} path="/historicoetimologico"/>
                 <Route element = { <CadastroAnimal/>} path="/cadastroanimal"/>
+                <Route element = { <AutServMed/> } path="/autservmed"/>
             </Routes>
         </BrowserRouter>
     )
