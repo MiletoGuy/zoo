@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
@@ -12,7 +13,7 @@ const rotaInternamentos = require('./routes/internamentos')
 const rotaMonitoramentos = require('./routes/monitoramentos')
 const rotaMedicacoes = require('./routes/medicacoes')
 const rotaUsoMedicacoes = require('./routes/usoMedicacoes')
-
+app.use(cors({origin:true, credentials:true}))
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())

@@ -1,7 +1,7 @@
 import {Route, BrowserRouter, Routes} from "react-router-dom"
 import CadastroAnimal from "../pages/CadastroAnimal"
 import Logado from "../pages/Logado";
-import Home from "../pages/home/Home";
+import Home from "../pages/home";
 import Filtro from "../pages/Filtro";
 import HistoricoEtimologico from "../pages/HistoricoEtimologico";
 import AutServMed from "../pages/AutServMed";

@@ -1,17 +1,13 @@
-import { useState } from "react"
-// import Modal from './pages/Modal/Modal.js';
-import { useNavigate } from "react-router-dom";
 import './Cadastroanimal.css';
 
 
 function CadastroAnimal() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <div className='app'>
 
       <header className="logo">
-        <img src="/imagens/logozoocasc.jpg" className="img-logo" />
+        <img src="/imagens/logozoocasc.jpg" className="img-logo"  alt="img-zoo"/>
         <div className="conta">
         <button className="email">email</button>
         </div>

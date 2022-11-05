@@ -16,7 +16,7 @@ function verifyJWT(req, res, next) {
 
 router.get('/', verifyJWT, (req, res, next) => {
     let promise = new Promise(function (resolve, reject) {
-        pool.query('SELECT * FROM animal', [], (error, result) => {
+        pool.query('SELECT * FROM animal AS a INNER JOIN raca AS b ON a.id_raca = b.id', [], (error, result) => {
             if (error) {
                 console.log("erro na query")
                 reject("Ocorreu um erro na query", error)
@@ -38,7 +38,9 @@ router.get('/', verifyJWT, (req, res, next) => {
                     peso: row.peso,
                     identificacao: row.identificacao,
                     funcionario: row.id_funcionario,
-                    raca: row.id_raca
+                    raca: row.id_raca,
+                    nomeCientifico: row.nomecientifico,
+                    especie: row.especie
                 }
             }),
             request: {

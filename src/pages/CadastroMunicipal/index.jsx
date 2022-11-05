@@ -5,7 +5,7 @@ function CadMunicipal() {
         <div className='app'>
 
         <header className="logo">
-          <img src="/imagens/cadmuni.png" className="img-logo" />
+          <img src="/imagens/cadmuni.png" className="img-logo"  alt="img-zoo"/>
           <div className="conta">
           <button className="email">email</button>
           </div>

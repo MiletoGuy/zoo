@@ -38,14 +38,8 @@
 
 }
 
-.App-titulo{
-  font-size: 20px;
-  color: rgb(123, 119, 119);
-  line-height: 15%;
 
-}
-
-.App-senha{
+.form{
   font-size: 20px;
   color: rgb(123, 119, 119); 
   line-height: 15%;
