@@ -151,12 +151,12 @@ function AutServMed() {
         </div>
         <div class="checkbox2">
             <input class="checkbox" type="checkbox"></input>Autorizo o profissional a examinar e/ou tratar e/ou proceder aos testes diagnósticos
-complementares que julgar necessários com base no exame clínico do animal e testes relacionados.
+            complementares que julgar necessários com base no exame clínico do animal e testes relacionados.
         </div>
         <div class="checkbox2">
             <input class="checkbox" type="checkbox"></input>Autorizo a aplicação de sedativos e/ou anestésicos necessários para proceder aos testes ou
-tratamentos, inclusive cirúrgicos, declarando que fui informado/a que estes testes e/ou tratamentos
-podem apresentar complicações, mesmo quando aplicados com perícia e prudência.
+            tratamentos, inclusive cirúrgicos, declarando que fui informado/a que estes testes e/ou tratamentos
+            podem apresentar complicações, mesmo quando aplicados com perícia e prudência.
 
         </div>
         <div class="checkbox2">
