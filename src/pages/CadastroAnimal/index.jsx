@@ -135,7 +135,7 @@ function CadastroAnimal() {
                 <MyFormControlLabel value="first" label="Chip" control={<Radio />} />
                 <MyFormControlLabel value="second" label="Anilha" control={<Radio />} />
               </RadioGroup>
-              <div className="add"><button className="adicionar">Cadastrar</button></div>
+              <div className="bo"><button className="especie">Cadastrar</button></div>
           </div>
         </div>
 
