@@ -34,7 +34,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/login', rotaLogin)
+app.use('/Login', rotaLogin)
 app.use('/enderecos', rotaEnderecos)
 app.use('/usuarios', rotaUsuarios)
 app.use('/animais', rotaAnimais)

@@ -2,11 +2,13 @@ import {useEffect, useState} from "react"
 import './Filtro.css';
 import Table from "./Table";
 import axios from 'axios'
+import {useNavigate} from "react-router-dom";
 
 function Filtro() {
     const [animais, setAnimais] = useState('')
     const [query, setQuery] = useState("");
     const keys = ["apelido", "identificacao", "raca", "sexo", "especie", "nomeCientifico"]
+    const navigate = useNavigate()
 
     const search = (data) => {
         return data.filter(
@@ -26,9 +28,12 @@ function Filtro() {
             .catch(err => console.log(err))
     }
 
+    const navCadastroAnimal = () => {
+        navigate('/cadastroanimal')
+    }
 
-    const teste = () => {
-        console.log(animais)
+    const navHome = () => {
+        navigate('/home')
     }
 
     useEffect(() => {
@@ -37,11 +42,10 @@ function Filtro() {
 
     return (
         <div className='app'>
-
             <header className="logo">
-                <img src="/imagens/logozoocasc.jpg" className="img-logo" alt="logo-zoo"/>
+                <img src="/imagens/logozoocasc.jpg" className="img-logo" alt="logo-zoo" onClick={navHome}/>
                 <div className="conta">
-                    <button className="email">email</button>
+                    <button className="email">{window.sessionStorage.getItem('userEmail')}</button>
                 </div>
             </header>
             <header className="barra">
@@ -56,18 +60,16 @@ function Filtro() {
                     Digite o apelido ou código do animal
                 </t2>
             </header>
-
             <div className="barrapesquisa">
                 <input type="text" placeholder='Procurar...' className='search'
                        onChange={e => setQuery(e.target.value)}/>
                 <div className="add">
-                    <button className="adicionar" onClick={teste}>Adicionar</button>
+                    <button className="adicionar" onClick={navCadastroAnimal}>Adicionar</button>
                 </div>
             </div>
             <div className="tabela-div">
                 <Table data={search(Object.values(animais))}></Table>
             </div>
-
         </div>
     );
 }

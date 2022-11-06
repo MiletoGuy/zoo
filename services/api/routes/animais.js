@@ -70,8 +70,7 @@ router.post('/', verifyJWT, (req, res, next) => {
         pool.query('INSERT INTO animal (apelido, origem, sexo, tipoidentificacao, peso, identificacao, dataadmissao, id_funcionario, id_raca) VALUES ($1,$2,$3,$4,$5,$6,NOW(),$7,$8) RETURNING *',
             [apelido, origem, sexo, tipoIdentificacao, peso, identificacao, funcionario, raca], (error, result) => {
                 if (error) {
-                    console.log("erro na query")
-                    reject("Ocorreu um erro na query", error)
+                    reject(error)
                 } else {
                     resolve(result)
                 }
@@ -100,7 +99,10 @@ router.post('/', verifyJWT, (req, res, next) => {
             }
         }
         res.status(200).send({response})
-    }).catch(error => res.status(400).send({mensagem: "Erro de resposta da promise", error}))
+    }).catch(error => {
+        res.status(400).send({error})
+        console.log(error)
+    })
 })
 
 router.get('/:id_animal', verifyJWT, (req, res, next) => {

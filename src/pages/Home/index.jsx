@@ -1,8 +1,8 @@
-import './logado.css';
+import './home.css';
 import React from "react";
 import {useNavigate} from "react-router-dom";
 
-function Logado() {
+function Home() {
     const navigate = useNavigate()
     const navigateZoo = () => {navigate('/filtro')}
     const navigateSamucao = () => {alert("Está opção está indisponível no momento")}
@@ -20,14 +20,9 @@ function Logado() {
       <div className="textname">
         <a className="title" href="/zoo.js">ZOOLÓGICO</a>
         <a className="title" href="/samucao">SAMUCÃO</a>
-        <a className="title" href="castramovel">CASTRAMÓVEL</a>
-      
-      
+        <a className="title" href="/castramovel">CASTRAMÓVEL</a>
       </div>
-    </div> 
-          
-          
+    </div>
   );
 }
-
-export default Logado;
+export default Home;

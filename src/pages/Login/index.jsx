@@ -1,9 +1,9 @@
-import './home.css';
+import './login.css';
 import React, {useState} from "react"
 import axios from 'axios'
 import {useNavigate} from "react-router-dom";
 
-function Home() {
+function Login() {
 
     const qs = require('qs')
     const navigate = useNavigate()
@@ -15,9 +15,10 @@ function Home() {
             .then(res => {
                 const token = res.data.token
                 window.sessionStorage.setItem('userId', res.data.userId)
+                window.sessionStorage.setItem('userEmail', res.data.userEmail)
                 window.sessionStorage.setItem('token', token)
                 console.log(res)
-                if (res.data.auth === true) navigate('/logado')
+                if (res.data.auth === true) navigate('/home')
                 else alert("Login inválido!")
             })
             .catch(err => {
@@ -60,4 +61,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Login;

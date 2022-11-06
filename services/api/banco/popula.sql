@@ -4,7 +4,7 @@ INSERT INTO usuario (nome,email, senha, cadastro, acesso, telefone, id_endereco)
 INSERT INTO usuario (nome,email, senha, cadastro, acesso, telefone, id_endereco) VALUES ('Maria Eduarda','maria@email.com',crypt('12345',gen_salt('bf')), '122430', 2, '45911223344',2);
 INSERT INTO raca (nomecomum, nomecientifico, especie, expectativadevida, estadoconservacao) VALUES ('Jacaré','Alligatoridae','Réptil','30 a 50 anos','Fora de Risco');
 INSERT INTO raca (nomecomum, nomecientifico, especie, expectativadevida, estadoconservacao) VALUES ('Onça Pintada','Phantera Onca','Mamíforo','12 a 15 anos (na natureza)','Quase Ameaçada');
-INSERT INTO animal (identificacao, apelido, peso, origem, dataAdmissao, sexo, tipoIdentificacao, id_funcionario, id_raca) VALUES ('1332AF3', 'cleitin', 130.3, 'cidade origem2', '2021-12-10', 'FEMEA', 'chip', 2, 2);
+INSERT INTO animal (identificacao, apelido, peso, origem, dataAdmissao, sexo, tipoIdentificacao, id_funcionario, id_raca) VALUES ('1332AF3', 'fabricia', 130.3, 'cidade origem2', '2021-12-10', 'FEMEA', 'chip', 2, 2);
 INSERT INTO animal (identificacao, apelido, peso, origem, dataAdmissao, sexo, tipoIdentificacao, id_funcionario, id_raca) VALUES ('4432GFT', 'jorgin', 120.5, 'cidade origem', '2021-05-20', 'MACHO', 'chip', 1, 1);
 INSERT INTO internamento (motivo, peso, diagnostico, id_animal) VALUES ('Um motivo foda', 12.5, 'Um diagnostico com um texto muito longo', 1);
 INSERT INTO internamento (motivo, peso, diagnostico, id_animal) VALUES ('Outro motivo top', 15.8, 'Outro diagnostico mas com um texto ainda mais longo', 2);
