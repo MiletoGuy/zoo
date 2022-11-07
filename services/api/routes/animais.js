@@ -16,7 +16,7 @@ function verifyJWT(req, res, next) {
 
 router.get('/', verifyJWT, (req, res, next) => {
     let promise = new Promise(function (resolve, reject) {
-        pool.query('SELECT * FROM animal', [], (error, result) => {
+        pool.query('SELECT * FROM animal AS a INNER JOIN raca AS b ON a.id_raca = b.id', [], (error, result) => {
             if (error) {
                 console.log("erro na query")
                 reject("Ocorreu um erro na query", error)
@@ -38,7 +38,9 @@ router.get('/', verifyJWT, (req, res, next) => {
                     peso: row.peso,
                     identificacao: row.identificacao,
                     funcionario: row.id_funcionario,
-                    raca: row.id_raca
+                    raca: row.id_raca,
+                    nomeCientifico: row.nomecientifico,
+                    especie: row.especie
                 }
             }),
             request: {
@@ -68,8 +70,7 @@ router.post('/', verifyJWT, (req, res, next) => {
         pool.query('INSERT INTO animal (apelido, origem, sexo, tipoidentificacao, peso, identificacao, dataadmissao, id_funcionario, id_raca) VALUES ($1,$2,$3,$4,$5,$6,NOW(),$7,$8) RETURNING *',
             [apelido, origem, sexo, tipoIdentificacao, peso, identificacao, funcionario, raca], (error, result) => {
                 if (error) {
-                    console.log("erro na query")
-                    reject("Ocorreu um erro na query", error)
+                    reject(error)
                 } else {
                     resolve(result)
                 }
@@ -98,7 +99,10 @@ router.post('/', verifyJWT, (req, res, next) => {
             }
         }
         res.status(200).send({response})
-    }).catch(error => res.status(400).send({mensagem: "Erro de resposta da promise", error}))
+    }).catch(error => {
+        res.status(400).send({error})
+        console.log(error)
+    })
 })
 
 router.get('/:id_animal', verifyJWT, (req, res, next) => {

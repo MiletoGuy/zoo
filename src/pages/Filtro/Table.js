@@ -17,13 +17,13 @@ const Table = ({ data }) => {
             </thead>
             <tbody className='tbody'>
                 {data.map((item) => (
-                <tr key={item.id} className='tr2'>
-                    <td>{item.name}</td>
-                    <td>{item.id}</td>
-                    <td>{item.id}</td>
-                    <td>{item.email}</td>
-                    <td>{item.surname}</td>
-                    <td>{item.id}</td>
+                <tr key={item.identificacao} className='tr2'>
+                    <td>{item.apelido}</td>
+                    <td>{item.identificacao}</td>
+                    <td>{item.tipoIdentificacao}</td>
+                    <td>{item.especie}</td>
+                    <td>{item.nomeCientifico}</td>
+                    <td>{item.sexo}</td>
                 </tr>
                 ))}
 
