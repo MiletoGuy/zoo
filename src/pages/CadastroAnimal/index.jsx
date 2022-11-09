@@ -185,7 +185,7 @@ function CadastroAnimal() {
         <p></p>
       </form>
       <div className="cadastro">
-        <button className="cadastrar">Cadastrar uma nova especie</button>
+        <button className="cadastrar" onClick={handleOpen}>Cadastrar uma nova raça</button>
       </div>
       <Modal
         className="modal"
@@ -197,23 +197,26 @@ function CadastroAnimal() {
         <div className="fundo">
           <div>
             <div className="bal">
-              <label className="lab">Nova Espécie</label>
+              <label className="lab">Nome Comum</label>
               <input type="text" placeholder='...' className='search' />
             </div>
             <div className="nov">
               <label className="lab">Nome Cientifíco</label>
               <input type="text" placeholder='...' className='search' />
             </div>
-            <RadioGroup name="use-radio-group" defaultValue="first">
-              <MyFormControlLabel value="first" label="Chip" control={<Radio />} />
-              <MyFormControlLabel value="second" label="Anilha" control={<Radio />} />
-            </RadioGroup>
+            <div className="esp">
+              <label className="lab">Espécie</label>
+              <input type="text" placeholder='...' className='search' />
+            </div>            
             <div className="bo"><button className="especie">Cadastrar</button></div>
           </div>
         </div>
+        </Modal>
+        
+      
 
-      </Modal>
-    </div>
+      </div>
+      
 
   )
     ;
