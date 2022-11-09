@@ -18,7 +18,7 @@ router.post('/', (req, res, next) => {
     })
 
     promise.then(result => {
-        if (!result.rows[0]) return res.status(500).json({auth: false, mensagem: 'Login inválido!'})
+        if (!result.rows[0]) return res.status(500).json({auth: false, mensagem: 'Login inválido!', result: result})
         const id = result.rows[0].id
         const token = jwt.sign({id}, process.env.SECRET, {expiresIn: 3000})
         return res.json({userId: id, userEmail: req.body.email, auth: true, token: token})

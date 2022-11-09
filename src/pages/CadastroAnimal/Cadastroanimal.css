@@ -103,24 +103,13 @@
   background-color: rgb(176,202,160);
 }
 
-.bal {
-  display: flex;
-  flex-direction: column;
-}
-
 .lab {
   margin-bottom: 5px;
-  width: 350px;
-  text-align: 60%;
-  border-radius: 6px;
   font-size: 18px;
-  position: left;
 }
 
 .nov {
   margin-bottom: 5px;
-  width: 350px;
-  text-align: 30%;
   border-radius: 6px;
   font-size: 18px;
 }
@@ -163,7 +152,7 @@
 }
 
 .fundo {
-  height: 30%;
+  height: 25%;
   width: 20%;
   position: absolute;
   left: 50%;
@@ -171,7 +160,9 @@
   transform: translate(-50%, -50%);
   background-color: rgb(202, 202, 202);
   text-align: center;
-
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .animal {
