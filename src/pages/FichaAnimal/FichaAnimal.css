@@ -1,0 +1,458 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            text: #000000;
+            link: #0080FF;
+            font-size: 16px;
+        }
+
+        .botoes {
+            width: 100px;
+            height: 30px;
+        }
+
+        table {
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            opacity: 1;
+            padding: 10px;
+            line-height: 20px;
+            transition: all 0.2s ease-in-out;
+        }
+        #cabecalho {
+            justify-content: space-between;
+            background-repeat: no-repeat;
+            position: relative;
+            margin-top: 6px;
+            display: flex;
+            width: 100%;
+            height: 50%;
+            float: left;
+        }
+        #cabecalho img{
+            padding-left: 15%;
+            padding-bottom: 15px;
+        }
+        #login-select{
+            background-color: #EEEEEE;
+            border: 0;
+            height: 30%;
+            border-radius: 5px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        #login-select:hover{
+            background-color: rgba(179, 179, 179, 0.836);
+        }
+        #navigation{
+            display: flex;
+            align-items: center;
+            padding-right: 15%;
+        }
+        .rodape {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #CECECE;
+            height:10%;
+            font-weight: bolder;
+            font-size: 14px;
+        }
+        .rodape span{
+            cursor: pointer;
+        }
+        .rodape span:hover{
+            background-color: #aaaaaa;
+        }
+        #consultar-animal{
+            padding-left: 15%;
+        }
+        #voltar{
+            padding-left: 10%;
+        }
+
+        .formulario{
+            width: 70%;
+            align-self: center;
+        }
+        #ficha-bondie{
+            font-size: 15px;
+             display: flex;
+        }
+        #ficha-bondie input{
+            border:0;
+            background-color: #EEEEEE;
+            border-radius: 3px;
+            font-weight: bolder;
+            height: 35px;
+            cursor: pointer;
+            padding-left: 10px;
+        }
+        #titulo-tabelas{
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        #titulo-adc1{
+            font-weight: bolder;
+            font-size: 16px;
+            align-content: right;
+        }
+        #titulo-adc2{
+            font-weight: bolder;
+            font-size: 16px;
+            align-content: right;
+        }
+        #titulo-adc3{
+            font-weight: bolder;
+            font-size: 16px;
+            align-content: right;
+            display: flex;
+            flex-direction: column;
+        }
+        #titulo-most{
+            font-weight: normal;
+            font-size: 16px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #codigo-bondie{
+            /* background-image: url("public/images/image33.png"); */
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 1.3em;
+        }
+
+        #nutricao-linha{
+            background-color:  #B0CAA0;
+            display: flex;
+            justify-content: center;
+        }
+        #cardapio-button{
+            border: 0;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color:  #B0CAA0;
+            cursor: pointer;
+        }
+
+        .tr-formulario{
+            font-weight: bolder;
+            border: 0;
+            height: 35px;;
+        }
+        #linha-colorida{
+            background-color:  #B0CAA0;
+        }
+       .enriquecimento-tr{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+       }
+       .botao-enriquecimento{
+            border: 0;
+            background-color:  #B0CAA0;
+            padding: 10px;
+            border-radius: 3px;
+            font-weight: bolder;
+            height: 40px;
+            cursor: pointer;
+       }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 70%;
+        }
+
+        .formulario-modal-enriquecimento{
+            width: 80%;
+            margin: auto;
+        }
+        .formulario-modal-enriquecimento input{
+            width: 350px;
+            border:0;
+            background-color: #EEEEEE;
+            border-radius: 3px;
+            font-weight: bolder;
+            height: 35px;
+            cursor: pointer;
+            padding-left: 10px;
+        }
+        #descricao-ambiental{
+           background-color: #EEEEEE;
+           border: 0;
+           border-radius: 3px;
+           font-weight: bolder;
+        }
+        #interacao-ambiental{
+            border: 0;
+            font-weight: bolder;
+            background-color: #EEEEEE;
+            cursor: pointer;
+            border-radius: 3px;
+            padding-left: 10px;
+            height: 35px;
+        }
+         .botao-enriquecimento-modal{
+            border: 0;
+            background-color:  #B0CAA0;
+            padding: 10px;
+            border-radius: 3px;
+            font-weight: normal;
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+       }
+
+       .botao-cardapio-semanal{
+            border: 0;
+            background-color:  #EEEEEE;
+            padding: 10px;
+            border-radius: 3px;
+            font-weight: normal;
+            width: 180px;
+            height: 45px;
+            cursor: pointer;
+       }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+         .close-enriquecimento {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-enriquecimento:hover,
+        .close-enriquecimento:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+         .close-close-nutricao {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-close-nutricao:hover,
+        .close-close-nutricao:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        /*
+        #cd_empresa {
+            width: 50px;
+        }
+
+        #nr_embarque {
+            width: 100px;
+        }
+
+        #nr_notafiscal {
+            width: 100px;
+        }
+
+        #nm_motorista {
+            width: 350px;
+        }
+
+        #nr_placacavalo {
+            width: 100px;
+        }
+
+        #cd_clifor {
+            width: 80px;
+        }
+
+        #nm_clifor {
+            width: 350px;
+        }
+
+        #nr_notafiscal {
+            width: 100px;
+        }
+
+        #cd_item {
+            height: 25px;
+        }
+
+        #dt_entregafiltro {
+            width: 150px;
+        }
+
+        #st_statusnf {
+            width: 100px;
+        }
+
+        .toggle td {
+            opacity: 0;
+            line-height: 0px;
+            padding: 0 0px;
+            border: 0;
+        }
+
+        .toggle a {
+            visibility: hidden;
+            display: none;
+        }
+
+        .toggle input {
+            width: 0px;
+            height: 0px;
+            display: none;
+        }
+
+        .toggle textarea {
+            display: none;
+        }
+
+        .toggle img {
+            display: none;
+        }
+
+        .hide td {
+            opacity: 0;
+            line-height: 0px;
+            padding: 0 10px;
+        }
+
+        .show td {
+            opacity: 1;
+            padding: 10px;
+            line-height: 20px;
+            border: 1px solid black;
+            background: #d9d9d9;
+        }
+
+        .maplink-off {
+            display: none;
+        }
+
+        .filtro,
+        .cima,
+        .meio,
+        .toggle,
+        .baixo td {
+            background: #f1f1f1;
+        }
+
+        .filtro,
+        .cima,
+        .meio,
+        .toggle,
+        .baixo tr:nth-child(odd) td {
+            background: #f9f9f9;
+        }
+
+        .btn {
+            padding: 500px;
+            text-align: center;
+        }
+
+        .imgobs-off img {
+            cursor: pointer;
+            transition: transform 0.25s ease;
+            -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+        }
+
+        .imgobs-off img:hover {
+            opacity: 0.9;
+        }
+
+        .imgjus-off img {
+            cursor: pointer;
+            transition: transform 0.25s ease;
+            -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+        }
+
+        .imgjus-off img:hover {
+            opacity: 0.9;
+        }
+
+        .imgobs-on img {
+            cursor: pointer;
+            transition: transform 0.25s ease;
+            -webkit-transform: scale(2.0);
+            transform: scale(2.0);
+        }
+
+        .imgjus-on img {
+            cursor: pointer;
+            transition: transform 0.25s ease;
+            -webkit-transform: scale(2.0);
+            transform: scale(2.0);
+        }
+
+        #cabecalho {
+            justify-content: space-between;
+            background-repeat: no-repeat;
+            margin: 0 0 28px 8px;
+            position: relative;
+            margin-top: 6px;
+            display: flex;
+            width: 1586px;
+            height: 107px;
+            float: left;
+        }
+        #navigation {
+            float: right;
+            display: inline;
+            list-style-type: none;
+            padding-left: 0px;
+            padding-right: 10px;
+            width: auto;
+        }
+		#myImg {
+				border-radius: 5px;
+				cursor: pointer;
+				transition: 0.3s;
+		}
+		#myImg:hover {opacity: 0.7;}
+		*/

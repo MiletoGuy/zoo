@@ -6,6 +6,8 @@ import Filtro from "../pages/Filtro";
 import HistoricoEtimologico from "../pages/HistoricoEtimologico";
 import AutServMed from "../pages/AutServMed";
 import CadastroMunicipal from "../pages/CadastroMunicipal";
+import FichaAnimal from "../pages/FichaAnimal";
+
 
 const Rotas = () => {
     return(
@@ -18,6 +20,7 @@ const Rotas = () => {
                 <Route element = { <CadastroAnimal/>} path="/cadastroanimal"/>
                 <Route element = { <AutServMed/> } path="/autservmed"/>
                 <Route element = { <CadastroMunicipal/> } path="/cadastromunicipal"/>
+                <Route element = { <FichaAnimal/> } path="/fichaanimal"/>
             </Routes>
         </BrowserRouter>
     )
