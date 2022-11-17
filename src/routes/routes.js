@@ -3,6 +3,7 @@ import CadastroAnimal from "../pages/CadastroAnimal"
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Filtro from "../pages/Filtro";
+import Perfil from "../pages/Perfil";
 import HistoricoEtimologico from "../pages/HistoricoEtimologico";
 import AutServMed from "../pages/AutServMed";
 import CadastroMunicipal from "../pages/CadastroMunicipal";
@@ -18,6 +19,7 @@ const Rotas = () => {
                 <Route element = { <CadastroAnimal/>} path="/cadastroanimal"/>
                 <Route element = { <AutServMed/> } path="/autservmed"/>
                 <Route element = { <CadastroMunicipal/> } path="/cadastromunicipal"/>
+                <Route element = { <Perfil/> } path="/perfil"/>
             </Routes>
         </BrowserRouter>
     )

@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react"
-import './Filtro.css';
+import './Perfil.css';
 import Table from "./Table";
 import axios from 'axios'
 import {useNavigate} from "react-router-dom";
 
 
-function Filtro() {
+function Perfil() {
     
     const [animais, setAnimais] = useState('')
     const [query, setQuery] = useState("");
-    const keys = ["apelido", "identificacao", "raca", "sexo", "especie", "nomeCientifico"]
+    const keys = ["nome", "email", "cadastro", "acesso", "telefone", "id_endereco"]
     const navigate = useNavigate()
 
     const search = (data) => {
@@ -60,11 +60,11 @@ function Filtro() {
             </header>
             <header className="titulo">
                 <t1 className="consultaranimal">
-                    Consultar Animal
+                    Perfil
                 </t1>
                 <p></p>
                 <t2 className="digite">
-                    Digite o apelido ou código do animal
+                    Digite email ou nome do usuario
                 </t2>
             </header>
             <div className="barrapesquisa">
@@ -81,4 +81,4 @@ function Filtro() {
     );
 }
 
-export default Filtro;
+export default Perfil;

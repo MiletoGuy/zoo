@@ -81,6 +81,14 @@ function CadastroAnimal() {
         navigate('/home')
     }
 
+    const navFiltro = () => {
+        navigate('/filtro')
+    }
+
+    const navCadastroAnimal = () => {
+        navigate('/cadastroanimal')
+    }
+
     const cadastrar = () => {
         console.log(nomeComum,nomeCientifico,especie)
         axios.post('http://localhost:3001/racas', {
@@ -115,7 +123,8 @@ function CadastroAnimal() {
                     </div>
                 </header>
                 <header className="barra">
-                    <button className="consultani">Cadastrar Animal</button>
+                    <button className="consultani" onClick={navFiltro}>Consultar Animal</button>
+                    <button className="consultani2" onClick={navCadastroAnimal}>Cadastrar Animal</button>
                 </header>
                 <header className="titulo">
                     <t1 className="consultaranimal">
