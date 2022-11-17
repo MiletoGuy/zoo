@@ -40,3 +40,19 @@
     text-decoration:none;
     color: #000;
 }
+.cad-usuario {
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-weight: 800;
+    font-size: 14px;
+    border: solid 2px rgb(141, 165, 127);
+    background-color: rgb(255, 255, 255);   
+}
+.Usuario {
+    padding-top: 40px;
+}
+.icon-plus {
+    vertical-align: middle;
+    
+}

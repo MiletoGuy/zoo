@@ -22,7 +22,10 @@ function Home() {
         <a className="title" href="/samucao">SAMUCÃO</a>
         <a className="title" href="/castramovel">CASTRAMÓVEL</a>
       </div>
-    </div>
+      <div className="Usuario">
+        <button className="cad-usuario">Cadastro de novo Usuario<img src='/imagens/plus.svg' style={{marginBottom: "1px"}} className='icon-plus'></img></button> 
+      </div>
+          </div>
   );
 }
 export default Home;
