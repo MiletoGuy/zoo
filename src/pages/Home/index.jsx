@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { useEffect, useState } from "react";
-import Select from 'react-select'
+/* import Select from 'react-select' */
 import {useNavigate} from "react-router-dom";
 
 function Home() {
@@ -49,16 +49,26 @@ function Home() {
         <div className="fundo">
           <div>
             <div className="nm">
-              <label className="nm-com">Nome Completo</label>
-              <input type="text" placeholder='...' className='search' />
-              <label className="dt-nasc">Data de Nascimento</label>
-              <input type="text" placeholder='...' className='search' />
-              <label className="rg-cad">RG</label>
-              <input type="text" placeholder='...' className='search' />
-              <label className="cpf-cad">CPF</label>
-              <input type="text" placeholder='...' className='search' />
-              <label className="email-cad">Email</label>
-              <input type="text" placeholder='...' className='search' />
+              <div className='mmmm'>
+                <label className="nm-com">Nome Completo</label>
+                <input type="text" placeholder='...' className='search' />
+              </div>
+              <div className='mmmm'>
+                <label className="dt-nasc">Data de Nascimento</label>
+                <input type="text" placeholder='...' className='search' />
+              </div>
+              <div className='mmmm'>
+                <label className="rg-cad">RG</label>
+                <input type="text" placeholder='...' className='search' />
+              </div>
+              <div className='mmmm'>
+                <label className="cpf-cad">CPF</label>
+                <input type="text" placeholder='...' className='search' />
+              </div>
+              <div className='mmmm'>
+                <label className="email-cad">Email</label>
+                <input type="text" placeholder='...' className='search' />
+              </div>
               </div>           
             <div className="bo"><button className="especie">Cadastrar</button></div>
           </div>
