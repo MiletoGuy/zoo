@@ -56,3 +56,11 @@
     vertical-align: middle;
     
 }
+.nm{
+    margin-bottom: 5px;
+  width: 350px;
+  text-align: 60%;
+  border-radius: 6px;
+  font-size: 18px;
+  position: left;
+}
