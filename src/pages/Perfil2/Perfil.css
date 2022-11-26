@@ -1,0 +1,113 @@
+.app {
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  text-align: left;
+  width: 80%;
+  padding-top: 20px;
+  padding-left: 10%;
+}
+
+.conta {
+  text-align: right;
+}
+
+.img-logo {
+  height: 100px;
+
+}
+
+.email {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: 200px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226) ;
+}
+
+.barra {
+  background-color: rgb(226, 226, 226);
+  padding-left: 10%;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+}
+
+.consultani {
+  border-style: none;
+  background-color: rgb(226, 226, 226);
+  padding-left: 0%;
+  padding-right: 10px;
+  color: rgb(90, 90, 90);
+  border-right: 1px solid rgb(90, 90, 90);
+}
+
+.consultani2 {
+  border-style: none;
+  background-color: rgb(226, 226, 226);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(90, 90, 90);
+}
+
+.titulo {
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.consultaranimal {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.digite {
+  font-size: 16px;
+}
+
+.listaa {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex-wrap: wrap;
+}
+
+.campo {
+  padding-top: 5px;
+  margin-right: 10px;
+}
+
+.campooo {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: auto;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226);
+}
+
+.but {
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  height: 26px;
+  width: auto;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgb(176,202,160);
+}
+
+.butt {
+  text-align: left;
+  margin-left: 10%;
+}
