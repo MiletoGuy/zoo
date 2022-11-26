@@ -42,6 +42,10 @@ function Filtro() {
         navigate('/filtro')
     }
 
+    const navPerfil = () => {
+        navigate('/perfil')
+    }
+
     useEffect(() => {
         getAnimais()
     }, [])
@@ -51,7 +55,7 @@ function Filtro() {
             <header className="logo">
                 <img src="/imagens/logozoocasc.jpg" className="img-logo" alt="logo-zoo" onClick={navHome}/>
                 <div className="conta">
-                    <button className="email">{window.sessionStorage.getItem('userEmail')}</button>
+                    <button className="email" onClick={navPerfil}>{window.sessionStorage.getItem('userEmail')}</button>
                 </div>
             </header>
             <header className="barra">
