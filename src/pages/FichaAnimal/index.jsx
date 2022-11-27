@@ -258,6 +258,37 @@ function FichaAnimal() {
                 </tr>
             </table>
 
+            <div className='intero'>
+                <div className='tit'>
+                    <t1 className="titulo">Histórico etimologico</t1>
+                </div>
+            <div className="listaa">
+                    <div className="campo">
+                        <label className="campoo">Data:</label>
+                        <input className="campooo"></input>
+                    </div>
+                    <div className="campo">
+                        <label className="campoo">Horário:</label>
+                        <input className="campooo"></input>
+                    </div>
+                    <div className="campo">
+                        <label className="campoo">Comportamento:</label>
+                        <input className="campooo"></input>
+                    </div>
+                    <div className="campo">
+                        <label className="campoo">Responsável:</label>
+                        <input className="campooo"></input>
+                    </div>
+                </div>
+                <div className="campo2">
+                        <label className="campoo">Observações:</label>
+                        <input className="campob"></input>
+                </div>
+                <div className='butt'>
+                    <button className='but'>Adicionar</button>
+                </div>
+            </div>
+
         </div>
         
     );
