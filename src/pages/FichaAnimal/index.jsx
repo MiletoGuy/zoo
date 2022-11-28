@@ -3,45 +3,27 @@ import './FichaAnimal.css';
 function FichaAnimal() {
     return (
         <div className='app'>
-           
-            <div id="cabecalho">
-               {/*  <img src="public/images/LogoZooCascavel.png"></img> */}
-                <div id="header">
+
+           <header className="logo">
+                <img src="/imagens/logozoocasc.jpg" className="img-logo" alt="logo-zoo"></img>
+                <div className="conta">
+                    <button className="email">{window.sessionStorage.getItem('userEmail')}</button>
                 </div>
-                <ul id="navigation">
-                    <select name="opcoes" id="login-select"size="1">
-                        <option value="">
-                            <b> NatalinoPinto@gmail.com </b>
-                        </option>
-                        <option value="">
-                            <b>Sair</b>
-                        </option>
-                    </select>
-                </ul>
-            </div>
-            <table className="rodape">
-            <tr>
-                <td id="consultar-animal">
-                    <span>Consultar Animal</span>
-                </td>
-                <td id="voltar">
-                    <span>Voltar</span>
-                </td>
-            </tr>
-            </table>
-            <br>
-            </br>
-            <table className="formulario" id="ficha-bondie">
-                <tr>
-                    <td colspan="6" id="titulo-tabelas">
-                        <span>Ficha da Blondie</span>
-                    </td>
+            </header>
+            <header className="barra">
+                <button className="consultani">Consultar Animal</button>
+            </header>
+            
+            <table className="formulario" id="ficha-animal">
+                <tr class="titulo">
+                    Ficha Animal
                 </tr>
-                <tr>
+                <tr className="conteudo">
                     <td>
-                        <label for="codigo_bondie">Código</label>
+                        <label class="conteudo-esquerda" for="codigo_bondie">Código</label>
                         <br></br>
                         <input type="text" value="123456789012347" id="codigo-bondie" name="codigo_bondie" />
+                         {/*Colocar Imagem Interrogacao */}
                     </td>
                     <td>
                         <label for="apelido">Apelido</label>
@@ -56,12 +38,12 @@ function FichaAnimal() {
                     <td>
                         <label for="idade">Idade</label>
                         <br></br>
-                        <input type="text" value="12 anos" name="idade" />
+                        <input type="text" value="12 anos" size="10" name="idade" />
                     </td>
                     <td>
                         <label for="sexo">Sexo</label>
                         <br></br>
-                        <input type="text" value="F" name="sexo" />
+                        <input type="text" value="Macho" size="8" name="sexo" />
                     </td>
                     <td>
                         <label for="dt_entrada">Data de Entrada</label>
@@ -69,7 +51,7 @@ function FichaAnimal() {
                         <input type="text" value="01/07/2017" name="dt_entrada" />
                     </td>
                 </tr>
-                <tr>
+                <tr className="conteudo">
                     <td>
                         <label for="especie">Espécie</label>
                         <br></br>
@@ -95,31 +77,28 @@ function FichaAnimal() {
             <br></br>
             <br></br>
             <table className="formulario" id="nutricao-alimentar">
-                <tr>
-                    <td id="titulo-tabelas">
-                        <span>Nutrição Alimentar</span>
-                    </td>
+                <tr className="titulo">
+                    Nutrição Alimentar  
                 </tr>
+                <br></br>
                 <tr id="nutricao-linha">
                     <td>
-                        <select name="opcoes" id="cardapio-button"size="1">
-                            <option value="">
-                                Cardapio Semanal
-                            </option>
-                        </select>
+                        <button className="botao-nutricao" id="cardapio-button"> Cardapio Semanal</button>
+                        <img src="/imagens/seta-baixo.png" className="img-setabaixo" alt="seta para baixo"></img>
                     </td>
                 </tr>
             </table>
             <br></br>
             <br></br>
             <table className="formulario" id="historico-clinico">
-                <tr>
+                <tr className="titulo">
                     <td id="titulo-tabelas"> <span> Histórico Clínico </span> </td>
                     <td colspan="2" id="titulo-adc1">
-                        <span> + Adicionar </span>
+                        <button className="botao-adicionar">+ Adicionar</button>
                     </td>
                 </tr>
-                <tr className="tr-formulario" id="linha-colorida">
+                <br></br>
+                <tr className="primeiro-tr" id="linha-colorida">
                     <td>
                         Consulta
                     </td>
@@ -134,7 +113,7 @@ function FichaAnimal() {
                     </td>
                 </tr>
                 <tr className="tr-formulario">
-                    <td>
+                    <td> 
                         Internamento
                     </td>
                     <td>
@@ -144,7 +123,7 @@ function FichaAnimal() {
                         Internamento devido a intoxicação alimentar
                     </td>
                     <td>
-                        {/* <img src="public/images/clips.png" alt=""></img> */}
+                        <img src="/imagens/clips.png" className="img-anexo" alt="clips"></img>
                     </td>
                 </tr>
                 <tr className="tr-formulario" id="linha-colorida">
@@ -158,7 +137,7 @@ function FichaAnimal() {
                         Consulta de rotina
                     </td>
                     <td>
-                        {/* <img src="public/images/clips.png" alt=""></img> */}
+                        <img src="/imagens/clips.png" className="img-anexo" alt="clips"></img>
                     </td>
                 </tr>
                 <tr className="tr-formulario">
@@ -172,30 +151,30 @@ function FichaAnimal() {
                         Consulta para averiguar descoloramento do pelo
                     </td>
                     <td>
-                       {/*  <img src="public/images/clips.png" alt=""></img> */}
+                        <img src="/imagens/clips.png" className="img-anexo" alt="clips"></img>
                     </td>
                 </tr>
                 <tr className="tr-formulario" id="linha-colorida">
                     <td colspan="4">
-
                     </td>
                 </tr>
-                <tr className="tr-formulario">
-                    <td colspan="4" id="titulo-most">
-                        <span>Mostrar +</span>
+                <tr>
+                    <td colspan="4" className="texto-mostrar">
+                       <button className="botao-mostrar">Mostrar +</button>
                     </td>
                 </tr>
             </table>
             <br></br>
             <br></br>
             <table className="formulario" id="historico-etimologico">
-                <tr>
+                <tr className="titulo">
                     <td id="titulo-tabelas"> <span>Historico Etimologico</span></td>
                     <td colspan="4" id="titulo-adc2">
-                        <span> + Adicionar </span>
-                        </td>
+                        <button className="botao-adicionar">+ Adicionar</button>
+                    </td>
                 </tr>
-                <tr className="tr-formulario" id="linha-colorida">
+                <br></br>
+                <tr className="primeiro-tr" id="linha-colorida">
                     <td>
                         Data
                     </td>
@@ -209,7 +188,7 @@ function FichaAnimal() {
                         Responsavel
                     </td>
                 </tr>
-                    <tr className="tr-formulario">
+                <tr className="tr-formulario">
                     <td>
                         01/02/2022
                     </td>
@@ -237,17 +216,23 @@ function FichaAnimal() {
                         Carlos
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="4" className="texto-mostrar">
+                       <button className="botao-mostrar">Mostrar +</button>
+                    </td>
+                </tr>
             </table>
             <br></br>
             <br></br>
             <table className="formulario" id="">
-                <tr>
-                    <td id="titulo-tabelas"><span>Enriquecimento Ambiental</span></td>
+                <tr className="titulo">
+                    <td id="titulo-tabelas">Enriquecimento Ambiental</td>
                     <td id="titulo-adc3">
-                        <span>+ Adicionar</span>
+                        <button className="botao-adicionar">+ Adicionar</button>
                         {/* <img src="public/images/calendario.png" width="50px" height="38px"></img> */}
                     </td>
                 </tr>
+                <br></br>
                 <tr className="enriquecimento-tr">
                     <td>
                         <button className="botao-enriquecimento" id="btn-enriquecimento1">Bola de Pano 03/08/2022</button>
@@ -257,7 +242,169 @@ function FichaAnimal() {
                     </td>
                 </tr>
             </table>
+            <br></br>
+            <div id="modal-nutricao" className="modal">
+                <div className="modal-content">
+                    <span className="close-nutricao">&times;</span>
+                    <table className="formulario-modal-enriquecimento">
+                        <tr>
+                            <td id="titulo-tabelas"> <span> Nutrição Alimentar </span> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="data-inicial">Data Inicial</label>
+                            <br></br>
+                            <input type="date"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label For="data-final">Data Final</label>
+                            <br></br>
+                            <input type="date" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button className="botao-cardapio-semanal" id="botao-novo-cardapio">Novo Cardapio Semanal 
+                            <img src="/imagens/clips.png" className="img-anexo" alt="clips"></img></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button className="botao-enriquecimento-modal" >Adicionar</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br></br>    
+            <div id="Modal-Historico_clinico">
+                <table>
+                    <tr>
+                        <td>
+                            Histórico Clínico
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Selecione o motivo da consulta
+                            <select name="" id="">
+                                <option value="">internamento</option>
+                            </select>
+                        </td>
+                        <td>
+                            Peso
+                            <input type="text" name="" id="" value="32 Quilos"/>
+                        </td>
+                        <td>
+                            Diagnóstico
+                            <input type="text" name="" id="" value="Infecção Urinária"/>
+                        </td>
+                        <td>
+                            Data
+                            <input type="text" name="" id="" value=""/>
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td>
+                            Motivo da Internação
+                            <input type="text" name="" id="" value="Internamento devido a dores abdominais"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mv Referente
+                            <input type="text" name="" id="" value=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        Monitoração/h
+                    </tr>
+                    <tr>
+                        Medicação
+                    </tr>
+                    <tr>
+                        <td>
+                            Orientações
+                            <input type="text"  name="" id="" value=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Evolução
+                            <input type="text" name="" id="" value=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Exames Complementares    
+                        </td>
+                        <td>
+                        +Adicionar 
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>Atualizar Ficha</button>
+                        </td>
+                    </tr>
+                </table>          
+            </div>
+            <br/>
+            <div id="modal-enriquecimento" class="modal">
+                <div class="modal-content">
+                <span class="close-enriquecimento">&times;</span>
+                <table class="formulario-modal-enriquecimento" >
+                    <tr>
+                        <td id="titulo-tabelas" colspan="2"><span>Enriquecimento Ambiental</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="atividade">Atividade</label>
+                            <br />
+                            <input type="text" value="Bola de pano com interior com carne vermelha" id="atividade-ambiental" name="atividade" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="descricao">Descrição</label>
+                            <br />
+                            <textarea id="descricao-ambiental" name="descricao" rows="6" cols="60">O Animal persegiu a bola de carne por 15 minutos após esse tempo, ele deitou e dormiu.</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="data">Data</label>
+                            <br />
+                            <input type="text" value="21/03/2022" id="data-ambiental" name="data" />
+                        </td>
+                        <td align="left">
+                            <label for="interacao">Interação</label>
+                            <br />
+                            <select name="interacao" id="interacao-ambiental"size="1">
+                                <option value="">
+                                    <b> Média </b>
+                                </option>
+                                <option value="">
+                                    <b> Baixa </b>
+                                </option>
+                                <option value="">
+                                    <b>Alta</b>
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="botao-enriquecimento-modal" >Adicionar</button>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <div className="Adicionado-Sucesso">
 
+            </div>
             <div className='intero'>
                 <div className='tit'>
                     <t1 className="titulo">Histórico etimologico</t1>
@@ -290,7 +437,6 @@ function FichaAnimal() {
             </div>
 
         </div>
-        
     );
 }
 
