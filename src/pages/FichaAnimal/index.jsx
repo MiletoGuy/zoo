@@ -243,196 +243,628 @@ function FichaAnimal() {
                 </tr>
             </table>
             <br></br>
-            <div id="modal-nutricao" className="modal">
+            <div className='modal-nutricao-alimentar'>
                 <div className="modal-content">
-                    <span className="close-nutricao">&times;</span>
-                    <table className="formulario-modal-enriquecimento">
-                        <tr>
-                            <td id="titulo-tabelas"> <span> Nutrição Alimentar </span> </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            <label for="data-inicial">Data Inicial</label>
-                            <br></br>
+                    <span className="close-enriquecimento">&times;</span>
+                    <div className='nutricao'>
+                        <div className='tit'>
+                            <t1 className="titulo">Nutrição</t1>    
+                        </div>
+                        <div className='campo-dt'>
+                            <label >Data Inicial:</label>
                             <input type="date"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            <label For="data-final">Data Final</label>
-                            <br></br>
-                            <input type="date" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><button className="botao-cardapio-semanal" id="botao-novo-cardapio">Novo Cardapio Semanal 
+                        </div>
+                        <div className='campo-dt'>
+                            <label >Data Final:</label>
+                            <input type="date"/>
+                        </div>
+                        <div className='cardapio-adc'>
+                            <button className="botao-cardapio-semanal" id="botao-novo-cardapio">Novo Cardapio Semanal 
                             <img src="/imagens/clips.png" className="img-anexo" alt="clips"></img></button>
-                            </td>
+                        </div>
+                        <div className='botao-nutri'>
+                            <button className="botao-enriquecimento-modal" >Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='modal-historico-clinico'>
+                <div className="modal-content">
+                <span className="close-enriquecimento">&times;</span>
+                <div className='historico-clinico'>
+                    <div className='tit'>
+                        <t1 className="titulo">Histórico Clínico</t1>    
+                    </div>    
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Selecione o motivo da consulta</label>
+                            <select className="campooo" name="" id="">
+                                <option value="">Internamento</option>
+                            </select>
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Peso</label>
+                            <input className="campooo"></input>
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Diagnóstico</label>
+                            <input className="campooo"></input>
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Data</label>
+                            <input className="campooo"></input>
+                        </div>
+                    </div>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Motivo da Internação</label>
+                            <textarea className="descricao" placeholder="Escreva o motivo da internação" name="descricao" rows="6" cols="60">
+                                
+                            </textarea>
+                        </div>        
+                    </div>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Mv Referente</label>
+                            <select className="campooo" name="" id="">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="listaa">
+                        <div className="campo">
+                        <table class="tg" >
+                        <thead>
+                        <tr>
+                            <th class="tg-ov69">Monitoração /h</th>
+                            <th class="tg-0lax">0</th>
+                            <th class="tg-0lax">1</th>
+                            <th class="tg-0lax">2</th>
+                            <th class="tg-0lax">3</th>
+                            <th class="tg-0lax">4</th>
+                            <th class="tg-0lax">5</th>
+                            <th class="tg-0lax">6</th>
+                            <th class="tg-0lax">7</th>
+                            <th class="tg-0lax">8</th>
+                            <th class="tg-0lax">9</th>
+                            <th class="tg-0lax">10</th>
+                            <th class="tg-0lax">11</th>
+                            <th class="tg-0lax">12</th>
+                            <th class="tg-0lax">13</th>
+                            <th class="tg-0lax">14</th>
+                            <th class="tg-0lax">15</th>
+                            <th class="tg-0lax">16</th>
+                            <th class="tg-0lax">17</th>
+                            <th class="tg-0lax">18</th>
+                            <th class="tg-0lax">19</th>
+                            <th class="tg-0lax">20</th>
+                            <th class="tg-0lax">21</th>
+                            <th class="tg-0lax">22</th>
+                            <th class="tg-0lax">23</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="tg-0lax">F.C.:</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
                         </tr>
                         <tr>
-                            <td>
-                                <button className="botao-enriquecimento-modal" >Adicionar</button>
-                            </td>
+                            <td class="tg-1svo">F.R</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
                         </tr>
-                    </table>
+                        <tr>
+                            <td class="tg-0lax">EtCO2</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1svo">SpO2</td> 
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">P.S</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1svo">P.D</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">P.M</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-ov69">Glicemia</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                        </tr>
+                        </tbody>
+                        </table>           
+                        </div>
+                    </div> 
+                    <div className="listaa">
+                        <div className="campo">
+                        <table class="tg" >
+                        <thead>
+                        <tr>
+                            <th class="tg-ov69">Medicação</th>
+                            <th class="tg-0lax">Via de Administracao</th>
+                            <th class="tg-0lax">Pasologia</th>
+                            <th class="tg-0lax">Frequência</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                            <th class="tg-0lax">_/_ _:_</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="tg-0lax">F.C.:</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1svo">F.R</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">EtCO2</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1svo">SpO2</td> 
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="1"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">P.S</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1svo">P.D</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax">P.M</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-ov69">Glicemia</td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="15"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="5"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="8"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                            <td class="tg-0lax"><input className="campo-tabela" size="3"></input></td>
+                        </tr>
+                        </tbody>
+                        </table>           
+                        </div>
+                    </div>       
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Orientações:</label>
+                            <textarea className="descricao" placeholder="Escreva as orientações" name="descricao" rows="6" cols="60">
+                                
+                            </textarea>
+                        </div>        
+                    </div>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Evolução:</label>
+                            <textarea className="descricao" placeholder="Escreva a evolução do quadro"  name="descricao" rows="6" cols="60">
+                                
+                            </textarea>
+                        </div>        
+                    </div>
+                    <div className='botao-clinico'>
+                        <button className="botao-enriquecimento-modal" >Atualizar Ficha</button>
+                    </div>
                 </div>
-            </div>
-            <br></br>    
-            <div id="Modal-Historico_clinico">
-                <table>
-                    <tr>
-                        <td>
-                            Histórico Clínico
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Selecione o motivo da consulta
-                            <select name="" id="">
-                                <option value="">internamento</option>
-                            </select>
-                        </td>
-                        <td>
-                            Peso
-                            <input type="text" name="" id="" value="32 Quilos"/>
-                        </td>
-                        <td>
-                            Diagnóstico
-                            <input type="text" name="" id="" value="Infecção Urinária"/>
-                        </td>
-                        <td>
-                            Data
-                            <input type="text" name="" id="" value=""/>
-                        </td>
-                    </tr>
-                    <tr>    
-                        <td>
-                            Motivo da Internação
-                            <input type="text" name="" id="" value="Internamento devido a dores abdominais"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Mv Referente
-                            <input type="text" name="" id="" value=""/>
-                        </td>
-                    </tr>
-                    <tr>
-                        Monitoração/h
-                    </tr>
-                    <tr>
-                        Medicação
-                    </tr>
-                    <tr>
-                        <td>
-                            Orientações
-                            <input type="text"  name="" id="" value=""/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Evolução
-                            <input type="text" name="" id="" value=""/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        Exames Complementares    
-                        </td>
-                        <td>
-                        +Adicionar 
-                        </td>   
-                    </tr>
-                    <tr>
-                        <td>
-                            <button>Atualizar Ficha</button>
-                        </td>
-                    </tr>
-                </table>          
-            </div>
-            <br/>
-            <div id="modal-enriquecimento" class="modal">
-                <div class="modal-content">
-                <span class="close-enriquecimento">&times;</span>
-                <table class="formulario-modal-enriquecimento" >
-                    <tr>
-                        <td id="titulo-tabelas" colspan="2"><span>Enriquecimento Ambiental</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label for="atividade">Atividade</label>
-                            <br />
-                            <input type="text" value="Bola de pano com interior com carne vermelha" id="atividade-ambiental" name="atividade" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label for="descricao">Descrição</label>
-                            <br />
-                            <textarea id="descricao-ambiental" name="descricao" rows="6" cols="60">O Animal persegiu a bola de carne por 15 minutos após esse tempo, ele deitou e dormiu.</textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="data">Data</label>
-                            <br />
-                            <input type="text" value="21/03/2022" id="data-ambiental" name="data" />
-                        </td>
-                        <td align="left">
-                            <label for="interacao">Interação</label>
-                            <br />
-                            <select name="interacao" id="interacao-ambiental"size="1">
-                                <option value="">
-                                    <b> Média </b>
-                                </option>
-                                <option value="">
-                                    <b> Baixa </b>
-                                </option>
-                                <option value="">
-                                    <b>Alta</b>
-                                </option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <button class="botao-enriquecimento-modal" >Adicionar</button>
-                        </td>
-                    </tr>
-                </table>
-                </div>
+                </div>         
             </div>
             <div className="Adicionado-Sucesso">
-
+                <div className="modal-content">
+                    <span className="close-enriquecimento">&times;</span>
+                    <div className='tit'>
+                        <t1 className="titulo">Adicionado Com sucesso!</t1>    
+                    </div>
+                    <div className='campo-dt'>
+                        <img src="/imagens/sucesso.png" className="img-sucesso" alt="Mensagem Sucesso"></img>
+                    </div>
+                </div>
             </div>
-            <div className='intero'>
-                <div className='tit'>
-                    <t1 className="titulo">Histórico etimologico</t1>
+            <div className="modal-historico-etimologico">
+                <div className="modal-content">
+                <span className="close-enriquecimento">&times;</span>
+                <div className='intero'>
+                    <div className='tit'>
+                        <t1 className="titulo">Histórico Etimologico</t1>
+                    </div>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Data:</label>
+                            <input className="campooo"></input>
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Horário:</label>
+                            <input className="campooo"></input>
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Comportamento:</label>
+                            <select className="campooo" name="" id="">
+                                <option value="PA">Parado Ativo</option>
+                                <option value="Pi">Parado Inativo</option>
+                                <option value="V1">Vocalização Alta</option>
+                                <option value="V2">Vocalização Baixa</option>
+                                <option value="IS+">Interação social positiva</option>
+                                <option value="IS-">Interação social negativa</option>
+                                <option value="M">Movimentando-se</option>
+                                <option value="CM">Comportamento de manutenção</option>
+                                <option value="IE">Interação com o enriquicemento</option>
+                                <option value="F">Forragem</option>
+                                <option value="D">Defecar</option>
+                                <option value="EX">Exploratório</option>
+                                <option value="ES">Estereotipado</option>
+                                <option value="FU">Fuga</option>
+                            </select>
+                            
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Responsável:</label>
+                            <input className="campooo"></input>
+                        </div>
+                    </div>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Observações:</label>
+                            <textarea className="descricao" name="descricao" rows="6" cols="60">
+                                
+                            </textarea>
+                        </div>     
+                    </div>
+                    <div className='butt'>
+                        <button className="but">Adicionar</button>
+                    </div>
+
                 </div>
-            <div className="listaa">
-                    <div className="campo">
-                        <label className="campoo">Data:</label>
-                        <input className="campooo"></input>
+                </div>
+            </div>
+            <div className="modal-enriquecimento-Ambiental">
+                <div className="modal-content">
+                <span className="close-enriquecimento">&times;</span>
+                <div className='intero'>
+                    <div className='tit'>
+                        <t1 className="titulo">Enriquecimento Ambiental</t1>
                     </div>
-                    <div className="campo">
-                        <label className="campoo">Horário:</label>
-                        <input className="campooo"></input>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Atividade:</label>
+                            <input className="campooo"></input>
+                        </div>
                     </div>
-                    <div className="campo">
-                        <label className="campoo">Comportamento:</label>
-                        <input className="campooo"></input>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Descrição:</label>
+                            <textarea className="descricao" name="descricao" rows="6" cols="60">
+                                
+                            </textarea>
+                        </div>
                     </div>
-                    <div className="campo">
-                        <label className="campoo">Responsável:</label>
-                        <input className="campooo"></input>
+                    <div className="listaa">
+                        <div className="campo">
+                            <label className="campoo">Data:</label>
+                            <input className="campooo"></input>
+                        </div>
+                        <div className="campo">
+                            <label className="campoo">Interação:</label>
+                            <select className="campooo" name="" id="">
+                                <option value="">Boa</option>
+                                <option value="">Média</option>
+                                <option value="">Ruim</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div className='butt'>
+                    <button className="but" >Adicionar</button>
                     </div>
                 </div>
-                <div className="campo2">
-                        <label className="campoo">Observações:</label>
-                        <input className="campob"></input>
-                </div>
-                <div className='butt'>
-                    <button className='but'>Adicionar</button>
                 </div>
             </div>
 

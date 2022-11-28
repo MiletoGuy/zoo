@@ -30,6 +30,7 @@
             line-height: 20px;
             transition: all 0.2s ease-in-out;
         }
+
         #cabecalho {
             justify-content: space-between;
             background-repeat: no-repeat;
@@ -40,11 +41,13 @@
             height: 50%;
             float: left;
         }
-        #cabecalho img{
+
+        #cabecalho img {
             padding-left: 15%;
             padding-bottom: 15px;
         }
-        #login-select{
+
+        #login-select {
             background-color: #EEEEEE;
             border: 0;
             height: 30%;
@@ -52,54 +55,64 @@
             font-weight: bolder;
             cursor: pointer;
         }
-        #login-select:hover{
+
+        #login-select:hover {
             background-color: rgba(179, 179, 179, 0.836);
         }
-        #navigation{
+
+        #navigation {
             display: flex;
             align-items: center;
             padding-right: 15%;
         }
+
         .rodape {
             width: 100%;
             margin-left: auto;
             margin-right: auto;
             background-color: #CECECE;
-            height:10%;
+            height: 10%;
             font-weight: bolder;
             font-size: 14px;
         }
-        .rodape span{
+
+        .rodape span {
             cursor: pointer;
         }
-        .rodape span:hover{
+
+        .rodape span:hover {
             background-color: #aaaaaa;
         }
-        #consultar-animal{
+
+        #consultar-animal {
             padding-left: 15%;
         }
-        #voltar{
+
+        #voltar {
             padding-left: 10%;
         }
 
-        .formulario{
+        .formulario {
             width: 70%;
             align-self: center;
         }
-        #ficha-animal{
+
+        #ficha-animal {
             font-size: 15px;
             display: flex;
             flex-direction: column
         }
-        .titulo{
+
+        .titulo {
             font-weight: bolder;
             font-size: 20px;
             text-align: left;
             margin: 0;
             padding: 0;
         }
-        #ficha-animal input{
-            border:0;
+
+        #ficha-animal input {
+            border: 0;
             background-color: #EEEEEE;
             border-radius: 3px;
             font-weight: bolder;
@@ -107,102 +120,116 @@
             cursor: pointer;
             padding-left: 10px;
         }
-        .img-interrogacao{
 
-        }
-        .conteudo-esquerda{
-           
-        }
-        #titulo-tabelas{
-     
-        }
-        .conteudo{
+        .img-interrogacao {}
+
+        .conteudo-esquerda {}
+
+        #titulo-tabelas {}
+
+        .conteudo {
             font-weight: bolder;
         }
-        #titulo-adc1{
+
+        #titulo-adc1 {
             font-size: 16px;
             align-content: right;
         }
-        #titulo-adc2{
-            
+
+        #titulo-adc2 {
+
             font-size: 16px;
             align-content: right;
         }
-        #titulo-adc3{
+
+        #titulo-adc3 {
             font-size: 16px;
             align-content: right;
         }
-        #titulo-most{
+
+        #titulo-most {
             font-weight: normal;
             font-size: 16px;
             display: flex;
             justify-content: flex-end;
         }
-        #codigo-bondie{
+
+        #codigo-bondie {
             /* background-image: url("public/images/image33.png"); */
             background-repeat: no-repeat;
             background-position: right;
             background-size: 1.3em;
         }
 
-        #nutricao-linha{
-            background-color:  #B0CAA0;
+        #nutricao-linha {
+            background-color: #B0CAA0;
             display: flex;
             justify-content: center;
         }
-        .img-setabaixo{
+
+        .img-setabaixo {
             padding-left: 10px;
         }
-        #cardapio-button{
+
+        #cardapio-button {
             border: 0;
             border-radius: 5px;
             font-size: 16px;
-            background-color:  #B0CAA0;
+            background-color: #B0CAA0;
             cursor: pointer;
         }
-        .primeiro-tr td{
+
+        .primeiro-tr td {
             text-align: left;
         }
-        .tr-formulario{
+
+        .tr-formulario {
             font-weight: bolder;
             border: 0;
             height: 35px;
         }
-        .tr-formulario td{
+
+        .tr-formulario td {
             text-align: left;
         }
-        .texto-mostrar{
+
+        .texto-mostrar {
             text-align: center;
             font-weight: bold;
-        }    
-        #linha-colorida{
-            background-color:  #B0CAA0;
         }
-       .enriquecimento-tr{
+
+        #linha-colorida {
+            background-color: #B0CAA0;
+        }
+
+        .enriquecimento-tr {
             display: flex;
             flex-wrap: wrap;
             align-content: space-between;
-       }
-       .botao-enriquecimento{
+        }
+
+        .botao-enriquecimento {
             border: 0;
-            background-color:  #B0CAA0;
+            background-color: #B0CAA0;
             padding: 10px;
             border-radius: 3px;
             font-weight: bolder;
             height: 40px;
             cursor: pointer;
-       }
-        .botao-mostrar{
+        }
+
+        .botao-mostrar {
             border: 0;
-            background-color:  white;     
+            background-color: white;
             cursor: pointer;
             font-weight: bolder;
             padding: 10px;
-            border-radius: 3px;   
+            border-radius: 3px;
         }
-        .botao-adicionar{
+
+        .botao-adicionar {
             border: 0;
-            background-color:  white;     
+            background-color: white;
             cursor: pointer;
             font-weight: bolder;
             padding: 10px;
@@ -210,7 +237,7 @@
         }
 
         /* The Modal (background) */
-       /* .modal {
+        /* .modal {
             display: none; /* Hidden by default 
             position: fixed; /* Stay in place 
             z-index: 1; /* Sit on top 
@@ -233,13 +260,14 @@
             width: 70%;
         }
 
-        .formulario-modal-enriquecimento{
+        .formulario-modal-enriquecimento {
             width: 80%;
             margin: auto;
         }
-        .formulario-modal-enriquecimento input{
+
+        .formulario-modal-enriquecimento input {
             width: 350px;
-            border:0;
+            border: 0;
             background-color: #EEEEEE;
             border-radius: 3px;
             font-weight: bolder;
@@ -247,13 +275,15 @@
             cursor: pointer;
             padding-left: 10px;
         }
-        #descricao-ambiental{
-           background-color: #EEEEEE;
-           border: 0;
-           border-radius: 3px;
-           font-weight: bolder;
+
+        .descricao {
+            background-color: #EEEEEE;
+            border: 0;
+            border-radius: 3px;
+            font-weight: bolder;
         }
-        #interacao-ambiental{
+
+        #interacao-ambiental {
             border: 0;
             font-weight: bolder;
             background-color: #EEEEEE;
@@ -262,27 +292,28 @@
             padding-left: 10px;
             height: 35px;
         }
-         .botao-enriquecimento-modal{
+
+        .botao-enriquecimento-modal {
             border: 0;
-            background-color:  #B0CAA0;
+            background-color: #B0CAA0;
             padding: 10px;
             border-radius: 3px;
             font-weight: normal;
             width: 150px;
             height: 40px;
             cursor: pointer;
-       }
+        }
 
-       .botao-cardapio-semanal{
+        .botao-cardapio-semanal {
             border: 0;
-            background-color:  #EEEEEE;
+            background-color: #EEEEEE;
             padding: 10px;
             border-radius: 3px;
             font-weight: normal;
             width: 180px;
             height: 45px;
             cursor: pointer;
-       }
+        }
 
         /* The Close Button */
         .close {
@@ -291,30 +322,35 @@
             font-size: 28px;
             font-weight: bold;
         }
+
         .close:hover,
         .close:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
         }
-         .close-enriquecimento {
+
+        .close-enriquecimento {
             color: #aaaaaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
+
         .close-enriquecimento:hover,
         .close-enriquecimento:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
         }
-         .close-close-nutricao {
+
+        .close-close-nutricao {
             color: #aaaaaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
+
         .close-close-nutricao:hover,
         .close-close-nutricao:focus {
             color: #000;
@@ -331,26 +367,30 @@
             margin-left: 10%;
             margin-right: 10%;
             flex-wrap: wrap;
-          }
+        }
 
-          .tit {
+        .tit {
             margin-bottom: 10px;
-          }
+            margin-left: 10%;
+            margin-right: 10%;
 
-          .titulo {
+        }
+
+        .titulo {
             font-weight: bold;
             font-size: 24px;
-          }
-          
-          .campo {
+        }
+
+        .campo {
             display: flex;
             flex-direction: column;
             text-align: left;
             padding-top: 5px;
             margin-right: 10px;
-          }
+            margin-top: 20px;
+        }
 
-          .campo2 {
+        .campo2 {
             display: flex;
             flex-direction: column;
             text-align: left;
@@ -358,9 +398,9 @@
             margin-right: 10%;
             padding-top: 5px;
             margin-right: 10px;
-          }
+        }
 
-          .campob {
+        .campob {
             padding-left: 10px;
             padding-right: 10px;
             text-align: left;
@@ -369,9 +409,9 @@
             border-style: none;
             border-radius: 5px;
             background-color: rgb(226, 226, 226);
-          }
-          
-          .campooo {
+        }
+
+        .campooo {
             padding-left: 10px;
             padding-right: 10px;
             text-align: left;
@@ -380,26 +420,107 @@
             border-style: none;
             border-radius: 5px;
             background-color: rgb(226, 226, 226);
-          }
-          
-          .but {
+        }
+
+        .but {
             margin-top: 30px;
             padding-left: 10px;
             padding-right: 10px;
-            text-align: left;
+            text-align: center;
             height: 26px;
             width: auto;
             border-style: none;
             border-radius: 5px;
-            background-color: rgb(176,202,160);
-          }
-          
-          .butt {
+            background-color: rgb(176, 202, 160);
+            width: 150px;
+            height: 40px;
+        }
+
+        .butt {
             text-align: left;
             margin-left: 10%;
-          }
+        }
 
+        .campo-dt {
+            margin-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
+        .cardapio-adc {
+            margin-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .botao-nutri {
+            margin-top: 2%;
+        }
+
+        .historico-clinico {
+            text-align: left;
+        }
+
+        .botao-clinico {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .tg td {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg th {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg .tg-ov69 {
+            background-color: #eeeeee;
+            border-color: inherit;
+            text-align: left;
+            vertical-align: top
+        }
+
+        .tg .tg-1svo {
+            background-color: #eeeeee;
+            text-align: left;
+            vertical-align: top
+        }
+
+        .tg .tg-0lax {
+            text-align: left;
+            vertical-align: top
+        }
+        
+        .campo-tabela{
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: left;
+            height: 26px;
+            border-style: none;
+            border-radius: 5px;
+            background-color: rgb(226, 226, 226);
+        }
         /*
         #cd_empresa {
             width: 50px;
