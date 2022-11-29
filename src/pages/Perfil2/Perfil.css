@@ -72,27 +72,31 @@
   font-size: 16px;
 }
 
-.barrapesquisa {
+.listaa {
   display: flex;
-  text-align: left;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 8px;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex-wrap: wrap;
 }
 
-.search {
+.campo {
+  padding-top: 5px;
+  margin-right: 10px;
+}
+
+.campooo {
   padding-left: 10px;
   padding-right: 10px;
   text-align: left;
   height: 26px;
-  width: 200px;
+  width: auto;
   border-style: none;
   border-radius: 5px;
   background-color: rgb(226, 226, 226);
 }
 
-.pesquisar {
-  margin-left: 20px;
+.but {
+  margin-top: 30px;
   padding-left: 10px;
   padding-right: 10px;
   text-align: left;
@@ -103,56 +107,7 @@
   background-color: rgb(176,202,160);
 }
 
-.add {
-  text-align: right;
-  flex-grow: 1;
-}
-
-.adicionar {
-  margin-left: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+.butt {
   text-align: left;
-  height: 26px;
-  width: auto;
-  border-style: none;
-  border-radius: 5px;
-  background-color: rgb(176,202,160);
-}
-
-.tabela-div {
- display: flex;
- justify-content: center;
-
-
-}
-
-.tabela {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  width: 80%;
-  text-align: left;
-  font-weight: 500;
-}
-
-.tabela thead tr {
-  background-color: rgb(176,202,160);
-  font-weight: bold;
-}
-
-.tabela th, .tabela td {
-  padding: 12px 15px;
-}
-
-.tabela tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.tabela tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.tabela tbody tr:last-of-type {
-  border-bottom: 2px solid rgb(176,202,160);
+  margin-left: 10%;
 }

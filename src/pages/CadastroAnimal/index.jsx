@@ -81,6 +81,14 @@ function CadastroAnimal() {
         navigate('/home')
     }
 
+    const navFiltro = () => {
+        navigate('/filtro')
+    }
+
+    const navCadastroAnimal = () => {
+        navigate('/cadastroanimal')
+    }
+
     const cadastrar = () => {
         console.log(nomeComum,nomeCientifico,especie)
         axios.post('http://localhost:3001/racas', {
@@ -115,7 +123,8 @@ function CadastroAnimal() {
                     </div>
                 </header>
                 <header className="barra">
-                    <button className="consultani">Cadastrar Animal</button>
+                    <button className="consultani" onClick={navFiltro}>Consultar Animal</button>
+                    <button className="consultani2" onClick={navCadastroAnimal}>Cadastrar Animal</button>
                 </header>
                 <header className="titulo">
                     <t1 className="consultaranimal">
@@ -145,74 +154,66 @@ function CadastroAnimal() {
                     </div>
                 </div>
 
-                <div className="barrapesquisa">
-                    <div className="bal">
-                        <label className="lab">Raça</label>
-                        <input type="text" placeholder='...' className='search' required
-                               onChange={e => setRaca(e.target.value)} value={raca}/>
-                    </div>
-                    <div className="bal">
-                        <label className="lab">Peso</label>
-                        <input type="number" placeholder='...' className='search' required
-                               onChange={e => setPeso(e.target.value)} value={peso}/>
-                    </div>
-                    <div className="bal">
-                        <label className="lab">Sexo</label>
-                        <input type="text" placeholder='MACHO/FEMEA' className='search' required
-                               onChange={e => setSexo(e.target.value)} value={sexo}/>
-                    </div>
-                </div>
-                <div className="barrapesquisa">
-                    <div className="bal">
-                        <label className="lab">Cidade Origem</label>
-                        <input type="text" placeholder='...' className='search' required
-                               onChange={e => setOrigem(e.target.value)} value={origem}/>
-                    </div>
-                    <div className="bal">
-                        <label className="lab">Data de entrada</label>
-                        <input type="text" placeholder='AAAA/MM/DD' className='search' required
-                               onChange={e => setEntrada(e.target.value)} value={entrada}/>
-                    </div>
-                </div>
-                <div className="add">
-                    <button className="adicionar">Cadastrar</button>
-                </div>
-                <p></p>
-            </form>
-            <div className="cadastro">
-                <button className="cadastrar" onClick={handleOpen}>Cadastrar uma nova raça</button>
-            </div>
-            <Modal
-                className="modal"
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <div className="fundo">
-                    <div className="nov">
-                        <label className="lab">Nome Comum</label>
-                        <input type="text" placeholder='...' className='search' onChange={e => setNomecomum(e.target.value)} value={nomeComum}/>
-                    </div>
-                    <div className="nov">
-                        <label className="lab">Nome Cientifíco</label>
-                        <input type="text" placeholder='...' className='search' onChange={e => setNomeCientifico(e.target.value)} value={nomeCientifico}/>
-                    </div>
-                    <div className="nov">
-                        <label className="lab">Espécie</label>
-                        <input type="text" placeholder='...' className='search' onChange={e => setEspecie(e.target.value)} value={especie}/>
-                    </div>
-                    <div className="bo">
-                        <button className="especie" onClick={cadastrar}>Cadastrar</button>
-                    </div>
-                </div>
-
-            </Modal>
+        <div className="barrapesquisa">
+          <div className="bal">
+            <label className="lab">Raça</label>
+            <input type="text" placeholder='...' className='search' required
+              onChange={e => setRaca(e.target.value)} value={raca} />
+          </div>
+          <div className="bal">
+            <label className="lab">Peso</label>
+            <input type="number" placeholder='...' className='search' required
+              onChange={e => setPeso(e.target.value)} value={peso} />
+          </div>
+          <div className="bal">
+            <label className="lab">Sexo</label>
+            <input type="text" placeholder='MACHO/FEMEA' className='search' required
+              onChange={e => setSexo(e.target.value)} value={sexo} />
+          </div>
         </div>
-
-    )
-        ;
-
+        <div className="barrapesquisa">
+          <div className="bal">
+            <label className="lab">Cidade Origem</label>
+            <input type="text" placeholder='...' className='search' required
+              onChange={e => setOrigem(e.target.value)} value={origem} />
+          </div>
+          <div className="bal">
+            <label className="lab">Data de entrada</label>
+            <input type="text" placeholder='AAAA/MM/DD' className='search' required
+              onChange={e => setEntrada(e.target.value)} value={entrada} />
+          </div>
+        </div>
+        <div className="add">
+          <button className="adicionar">Cadastrar</button>
+        </div>
+        <p></p>
+      </form>
+      <div className="cadastro">
+        <button className="cadastrar" onClick={handleOpen}>Cadastrar uma nova especie</button>
+      </div>
+      <Modal
+        className="modal"
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div className="fundo">
+          <div>
+            <div className="bal">
+              <label className="lab">Nova Espécie</label>
+              <input type="text" placeholder='...' className='search' />
+            </div>
+            <div className="nov">
+              <label className="lab">Nome Cientifíco</label>
+              <input type="text" placeholder='...' className='search' />
+            </div>
+            <div className="bo"><button className="especie" onClick={cadastrar}>Cadastrar</button></div>
+          </div>
+        </div>
+      </Modal>
+    </div>
+    );
 }
 
 
