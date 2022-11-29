@@ -32,7 +32,12 @@
     align-items: center;
     justify-content: center;
     padding-right: 50px;  
-    padding-left: 50px;  
+    padding-left: 50px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+.logoservicos:hover {
+    filter: none;
 }
 .title {
     padding-left: 130px;
