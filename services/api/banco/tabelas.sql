@@ -1,3 +1,4 @@
+CREATE EXTENSION pgcrypto;
 CREATE TABLE endereco
 (
     id     serial primary key,
