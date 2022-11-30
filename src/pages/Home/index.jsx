@@ -69,6 +69,10 @@ function Home() {
                 <label className="email-cad">Email</label>
                 <input type="text" placeholder='...' className='search' />
               </div>
+              <div className='mmmm'>
+                <label className="email-cad">Permissão</label>
+                <input type="text" placeholder='...' className='search' />
+              </div>
               </div>           
             <div className="bo"><button className="especie">Cadastrar</button></div>
           </div>
