@@ -32,55 +32,16 @@
     align-items: center;
     justify-content: center;
     padding-right: 50px;  
-    padding-left: 50px;  
+    padding-left: 50px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+.logoservicos:hover {
+    filter: none;
 }
 .title {
     padding-left: 130px;
     padding-right: 130px;
     text-decoration:none;
     color: #000;
-}
-.cad-usuario {
-    text-align: center;
-    width: 250px;
-    height: 30px;
-    font-weight: 800;
-    font-size: 14px;
-    border: solid 2px rgb(141, 165, 127);
-    background-color: rgb(255, 255, 255);   
-}
-.Usuario {
-    padding-top: 40px;
-}
-.icon-plus {
-    vertical-align: middle;
-    
-}
-.nm{
-    margin-bottom: 5px;
-  width: 350px;
-  text-align: 60%;
-  border-radius: 6px;
-  font-size: 18px;
-  position: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mmmm {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-}
-
-.fundo {
-    height: auto;
-    width: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.search {
-    margin-right: 0px;
 }
