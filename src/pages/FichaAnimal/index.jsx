@@ -1,17 +1,29 @@
 import './FichaAnimal.css';
+import {useNavigate} from "react-router-dom";
 
 function FichaAnimal() {
+
+    const navigate = useNavigate()
+
+    const navHome = () => {
+        navigate('/home')
+    }
+
+    const navFiltro = () => {
+        navigate('/filtro')
+    }
+
     return (
         <div className='app'>
 
            <header className="logo">
-                <img src="/imagens/logozoocasc.jpg" className="img-logo" alt="logo-zoo"></img>
+                <img src="/imagens/logozoocasc.jpg" className="img-logo" alt="logo-zoo" onClick={navHome}></img>
                 <div className="conta">
                     <button className="email">{window.sessionStorage.getItem('userEmail')}</button>
                 </div>
             </header>
             <header className="barra">
-                <button className="consultani">Consultar Animal</button>
+                <button className="consultani" onClick={navFiltro}>Consultar Animal</button>
             </header>
             
             <table className="formulario" id="ficha-animal">

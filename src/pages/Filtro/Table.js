@@ -1,7 +1,14 @@
 import React from 'react';
 import './Filtro.css';
+import {useNavigate} from "react-router-dom";
 
 const Table = ({ data }) => {
+
+    const navigate = useNavigate()
+
+    const navFichaAnimal = () => {
+        navigate('/fichaanimal')
+    }
 
     return (
         <table className='tabela'>
@@ -18,7 +25,7 @@ const Table = ({ data }) => {
             <tbody className='tbody'>
                 {data.map((item) => (
                 <tr key={item.identificacao} className='tr2'>
-                    <td>{item.apelido}</td>
+                    <td onClick={navFichaAnimal}>{item.apelido}</td>
                     <td>{item.identificacao}</td>
                     <td>{item.tipoIdentificacao}</td>
                     <td>{item.especie}</td>
